@@ -1,116 +1,177 @@
 ---
 name: build-premium-pptx
-description: Create or redesign polished PowerPoint presentations (.pptx) by mining a local template library, matching content to proven slide layouts, sourcing strong visuals, preserving theme consistency, and rendering the finished deck for visual QA. Use for pitch decks, reports, academic talks, thesis defenses, scientific presentations, image-rich slides, executive presentations, PPT美化, 答辩PPT, 工作汇报, or when the user provides PowerPoint templates to reuse.
+description: Turn rough notes, documents, spreadsheets, research materials, or an existing deck into a polished editable PowerPoint with almost no design decisions required from the user. Uses a built-in original 20-slide green-and-gold layout kit by default, can privately mine a local template library when useful, automatically organizes the story, matches content to layouts, adds relevant visuals, and renders every slide for QA. Use for PPT制作, PPT美化, 工作汇报, 答辩PPT, 学术报告, 科研分享, 项目提案, pitch decks, reports, and users who say they are bad at design, organization, or PowerPoint.
 ---
 
 # Build Premium PPTX
 
-Turn rough content into a coherent, visual deck by reusing the strongest layouts in an existing template library. Default to an autopilot experience for people who do not know presentation design. Keep the result editable and validate the rendered slides, not just the source code.
-
-## Default to beginner autopilot
-
-Assume the user may not know the right slide count, structure, template, layout, palette, font, or image style.
-
-- Accept a one-line request plus any notes, document, spreadsheet, or existing deck. Do not require a design brief.
-- Ask at most two plain-language questions only when the answers materially change the deck: who will see it, and how long the presentation is. Infer everything else.
-- Do not ask the user to browse a large template library or choose among design terms. Select the best template yourself and explain it as a benefit, such as “clear for a thesis defense” or “more visual for a product pitch.”
-- Present one recommended direction. Offer up to two alternatives only when they are genuinely different or the user asks.
-- If the user says “直接做”, “你决定”, “I don't know”, or equivalent, proceed without another design question.
-- Before editing, summarize the inferred plan in five short lines: audience, goal, length, visual direction, and story arc. Continue unless the user objects.
-- Keep choices reversible: editable text, replaceable images, theme colors, and reusable layouts.
-
-Example beginner requests:
+Create the deck for the user, not a template-choosing exercise. The normal beginner workflow is:
 
 ```text
-把这个 Word 做成 10 页答辩 PPT，听众是老师，时间 8 分钟；我不懂设计，请直接决定模板和排版。
-Turn these notes into an investor deck. I am new to PowerPoint, so choose the structure, visuals, and template for me.
+user drops materials -> infer brief -> organize story -> choose layouts -> build -> render -> repair -> deliver editable PPTX
 ```
 
-## Apply the house rules
+The user should not need to understand masters, grids, visual hierarchy, charts, palettes, or slide roles.
 
-- Use one primary template and at most one donor template. Keep aspect ratio, theme fonts, palette, spacing, and illustration style coherent.
-- Make each slide communicate one takeaway. Write the takeaway as the title when possible.
-- Prefer a strong image, diagram, or chart over decorative filler. Do not invent data or evidence.
-- Preserve editability for text, charts, and simple diagrams.
-- Do not redistribute template files, fonts, or stock assets unless their license permits it. Treat user-provided templates as local inputs by default.
-- Read [references/design-and-qa.md](references/design-and-qa.md) before storyboarding and again before final QA.
+## Load the built-in system
 
-## 1. Set the brief
+Before storyboarding, read:
 
-Extract the audience, purpose, duration or slide count, language, output format, and available brand/template assets. Infer safe defaults instead of blocking when details are absent:
+- [references/layout-recipes.json](references/layout-recipes.json) for deterministic layout and scenario selection;
+- [references/design-and-qa.md](references/design-and-qa.md) for design, data-integrity, and render checks.
 
-- 16:9 landscape
-- the user's language
-- concise, professional tone
-- one visual system and one accent color
-- roughly one slide per minute for a live talk
+The default visual resource is [assets/premium-green-layout-kit.pptx](assets/premium-green-layout-kit.pptx). It contains 20 original, editable 16:9 layouts: three covers, section, agenda, thesis, image/text, gallery, evidence, process, timeline, comparison, three native charts, research method, findings matrix, risk matrix, quote, and closing. Its three hero images are replaceable assets in `assets/`.
 
-Keep mandatory logos, citations, data, and wording. Do not preserve weak source formatting merely because it exists.
+Use the built-in kit first. A private local template library is an optional source of extra layout ideas, not a prerequisite and not a choice the user must make.
 
-## 2. Discover reusable templates
+## Beginner contract
 
-If the user provides a template directory, catalog it before opening files one by one:
+- Accept a one-line request plus any mix of notes, Word/PDF files, spreadsheets, images, or an old deck. Do not require a design brief.
+- Ask at most two plain-language questions, and only when the answers materially change the result: `Who will see it?` and `How long will you present?`
+- If the user says “直接做”, “你决定”, “我不会”, “I don't know”, or equivalent, proceed immediately.
+- Infer language, aspect ratio, tone, slide count, story structure, visual direction, and layout selection.
+- Never ask a beginner to choose a template, palette, font pair, layout family, or design style from a long list.
+- Present one recommended direction. Only offer alternatives when the user asks or when two directions have genuinely different business consequences.
+- Keep everything reversible: editable text, native charts, editable simple diagrams, replaceable images, and theme colors.
 
-```bash
-python scripts/catalog_pptx.py "/path/to/templates" --query academic --query green --output work/catalog.json
+Before building, state the inferred plan in five short lines: audience, goal, length, visual direction, and story arc. This is an informative checkpoint, not a request for permission; continue unless the user objects.
+
+## 1. Diagnose the material
+
+Extract and preserve:
+
+- required facts, numbers, units, dates, names, logos, citations, and wording;
+- audience, desired action, delivery time, language, and output format;
+- available photos, figures, tables, charts, brand assets, and templates.
+
+Then separate the material into:
+
+1. `must show`: required evidence or decisions;
+2. `should say`: context needed to understand the evidence;
+3. `appendix`: useful detail that interrupts the main story;
+4. `omit`: duplication, unsupported claims, and formatting noise.
+
+Do not invent missing data, citations, user quotes, logos, or research results. Mark genuine gaps clearly or turn them into a next action.
+
+Safe defaults when context is missing:
+
+- 16:9 landscape;
+- the user's language;
+- concise professional tone;
+- roughly one slide per minute for a live talk;
+- one visual system, one dominant color, one accent color;
+- conclusion-led slide titles.
+
+## 2. Build the story before the slides
+
+Create an internal storyboard with:
+
+```text
+slide | takeaway title | evidence | layout role | visual needed
 ```
 
-Use repeatable `--query` terms as OR filters. The catalog reports slide count, aspect ratio, media, charts, diagrams, layouts, transitions, animation timing, theme fonts, and theme colors. Run `python scripts/catalog_pptx.py --self-test` after modifying the script.
+Use only the slides needed to move the audience through:
 
-Cache a full catalog in the working directory and reuse it until the template library changes. Use targeted queries for fast one-off work.
-
-Shortlist no more than three decks with the right audience, aspect ratio, visual density, and slide roles. Render candidate decks or contact sheets with the available presentation tooling and inspect the actual slides. Metadata is a filter, not a design verdict. Make the final selection for a beginner; do not hand the shortlist back as homework.
-
-Choose:
-
-1. one primary deck for cover, sections, body, and ending;
-2. optionally one donor deck for a missing layout type;
-3. no donor when the primary deck already covers the story.
-
-If no template library is available, build a minimal visual system from the user's brand assets and follow the reference guide.
-
-## 3. Storyboard before editing
-
-Create a slide list with four fields: `slide number | takeaway | evidence | layout role`. Cover the narrative with only the slides needed:
-
-1. opening promise or question;
+1. promise or question;
 2. context and problem;
 3. approach or argument;
 4. evidence and implications;
 5. conclusion and next action.
 
-Map each row to a proven layout in the primary deck. Prefer a close structural match over a visually impressive but semantically wrong slide.
+Each slide must answer one audience question and communicate one takeaway. Write that takeaway as the title when possible. Split a slide instead of shrinking text or stacking unrelated points.
 
-## 4. Reuse layouts safely
+## 3. Select layouts automatically
 
-- Duplicate source slides inside the source deck when possible; replace text and media without disturbing geometry.
-- Preserve masters, theme relationships, crop behavior, grouping, and animations.
-- Rebuild only when the layout cannot fit the message cleanly.
-- If the editing library cannot preserve transitions or animation timing, use native PowerPoint automation or select a static layout. Do not silently flatten a dynamic deck.
-- Replace rather than stack content. Remove unused placeholders, sample copy, hidden artifacts, and source-only slides.
-- Keep a consistent header, footer, page-number policy, and citation style.
+Identify the closest scenario in `scenario_recipes` inside [references/layout-recipes.json](references/layout-recipes.json), then adjust the recipe to the actual evidence. Map every storyboard row to a layout by message type, not by decoration.
 
-## 5. Source useful visuals
+Examples:
 
-Use this order: user assets, licensed local library, authoritative/official sources, licensed stock, then generated visuals. Record source URLs or credit lines when attribution is required. Reject watermarks, low-resolution images, inconsistent icon families, and images that merely repeat the title.
+- thesis defense -> science cover, central thesis, research method, visual evidence, editable charts, findings, risks, closing;
+- work report -> nature cover, thesis, agenda, evidence, process, timeline, results charts, closing;
+- proposal -> strategy cover, problem, evidence, plan, comparison, economics, risk response, decision;
+- short executive brief -> strategy cover, decision thesis, three signals, comparison, one chart, risks, action.
 
-For research or technical decks, preserve units, legends, sample sizes, uncertainty, and source notes. Redraw a figure only when its meaning remains unchanged.
+Respect every layout's `slots` limit. Replace sample copy, data, labels, and images; do not merely place new content on top. Use the deck as a layout bank: duplicate only the selected slides into the final deck and remove unused resource pages.
 
-## 6. Build and render
+## 4. Use a private template library only when it adds value
 
-Use the presentation tooling already available in the environment. Avoid adding a new dependency when existing slide tooling can edit or generate the deck.
+Use the local-library route when the user explicitly supplies brand templates, requests a house style, or the built-in kit lacks a necessary layout.
 
-After building:
+Catalog first instead of opening hundreds of files:
 
-1. save the editable `.pptx`;
-2. render every slide to images;
-3. create a contact sheet for whole-deck rhythm;
-4. inspect dense slides at full resolution;
-5. revise and render again.
+```bash
+python scripts/catalog_pptx.py "/path/to/templates" --query academic --query green --output work/catalog.json
+```
 
-## 7. Deliver only after QA
+`--query` values are repeatable OR filters. The catalog reports slide count, aspect ratio, media, charts, diagrams, layouts, transitions, animation timing, theme fonts, and theme colors. Cache a full catalog until the library changes. Run `python scripts/catalog_pptx.py --self-test` after changing the script.
 
-Apply the full checklist in [references/design-and-qa.md](references/design-and-qa.md). Confirm that the deck opens, all slides render, nothing is clipped or overlapping, text is readable, images are sharp, and the narrative works without speaker explanation.
+Shortlist at most three decks internally, render them, and make the final selection yourself. Use one primary deck and at most one donor deck. Prefer a structurally correct layout over a more decorative but semantically wrong one.
 
-Deliver the final `.pptx` and any requested PDF. Briefly disclose the primary template, donor template if any, externally sourced assets, and the two or three easiest places the user can edit later. Do not include the user's template library in the deliverable.
+Treat purchased or user-provided templates as private inputs. Reuse them locally when authorized, but never publish or redistribute the originals, embedded stock, or fonts unless redistribution rights are explicit. Public deliverables may contain original layouts and generated or separately licensed assets derived from design principles, not copied slides.
+
+## 5. Build an editable deck
+
+- Preserve native text, editable charts, and editable simple diagrams.
+- Preserve masters, theme relationships, crops, grouping, transitions, and animation when the chosen editing path supports them.
+- If transitions or animation cannot survive the editing library, use native PowerPoint automation or choose a static layout; do not silently flatten a dynamic deck.
+- Keep headers, footers, page numbers, citations, margins, strokes, and corner radii consistent.
+- Use one primary layout system. Avoid isolated slides that look imported from another deck.
+- Keep titles at least 24 pt, body text at least 16 pt, and citations at least 9 pt unless the presentation tooling specifies stricter values.
+
+When the environment provides `@oai/artifact-tool`, use it for programmatic slide creation and editing. The original resource kit can be regenerated with:
+
+```bash
+node scripts/build_premium_resource_kit.mjs --assets assets --out assets/premium-green-layout-kit.pptx
+```
+
+Do not replace the presentation workflow with `python-pptx` when the environment's presentation tooling requires artifact-tool or native PowerPoint.
+
+## 6. Add visuals that explain
+
+Use this priority:
+
+1. user-provided visuals;
+2. licensed local assets;
+3. authoritative or official sources;
+4. licensed stock;
+5. generated imagery.
+
+Choose visuals that prove, compare, orient, or explain. Reject watermarks, low resolution, irrelevant decoration, stretched images, mixed icon families, and screenshots of spreadsheets. Replace cover heroes with images that match the user's actual topic.
+
+For scientific or data slides, preserve units, denominators, legends, sample sizes, uncertainty, source notes, and statistical meaning. Redraw only when meaning remains unchanged.
+
+## 7. Render, inspect, and repair
+
+Never deliver after only editing the source file.
+
+1. Save the editable `.pptx`.
+2. Render every slide to an image.
+3. Inspect a contact sheet for narrative rhythm and visual consistency.
+4. Inspect every slide at full size for clipping, overlap, missing glyphs, bad crops, tiny labels, and placeholders.
+5. Run available overflow and layout tests.
+6. Repair every issue and render again.
+7. Open the final `.pptx` in a compatible presentation application when available.
+
+Apply the full checklist in [references/design-and-qa.md](references/design-and-qa.md). A deck is not complete while any slide fails render QA.
+
+## 8. Deliver for a non-designer
+
+Deliver the editable `.pptx` and the requested PDF when applicable. In the handoff, say only what helps the user act:
+
+- what story direction was chosen;
+- which template/resource system was used;
+- any external visual sources or generation disclosure;
+- the two or three easiest places to edit later;
+- any factual gap the user still needs to fill.
+
+Do not include the user's private template library in the deliverable.
+
+Beginner examples:
+
+```text
+把这个 Word 和 Excel 做成 10 页工作汇报，我不会做 PPT，你直接决定。
+把这些实验结果做成 8 分钟答辩，老师能迅速看懂结论。
+Turn these notes into an investor deck. Choose the story, visuals, and layout for me.
+美化这个旧 PPT，但数字、引用和图表含义都不能变。
+```
 
