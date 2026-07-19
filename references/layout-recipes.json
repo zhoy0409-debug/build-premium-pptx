@@ -2,10 +2,17 @@
   "version": 1,
   "resource": {
     "file": "../assets/premium-green-layout-kit.pptx",
+    "default_theme": "green-gold",
     "aspect_ratio": "16:9",
     "slides": 20,
     "palette": ["#0B3B2A", "#1D6B43", "#AFC3B2", "#F7F3EA", "#D89A2B"],
-    "fonts": ["Microsoft YaHei", "Georgia"]
+    "fonts": ["Microsoft YaHei", "Georgia"],
+    "themes": {
+      "green-gold": {"file": "../assets/premium-green-layout-kit.pptx", "use_for": ["work report", "project", "education", "sustainability"], "palette": ["#0B3B2A", "#1D6B43", "#AFC3B2", "#F7F3EA", "#D89A2B"]},
+      "academic-blue": {"file": "../assets/premium-blue-layout-kit.pptx", "use_for": ["thesis defense", "research", "technical talk"], "palette": ["#173A5E", "#2E5D91", "#B8C9DA", "#F7F9FB", "#C58A32"]},
+      "institutional-red": {"file": "../assets/premium-red-layout-kit.pptx", "use_for": ["university", "public institution", "formal review"], "palette": ["#681F2C", "#9A3040", "#D9BBC0", "#FBF8F5", "#BF8850"]},
+      "consulting-purple": {"file": "../assets/premium-purple-layout-kit.pptx", "use_for": ["strategy", "analytics", "business", "executive brief"], "palette": ["#392846", "#684C7D", "#C9BFD0", "#F8F6F8", "#C99A4A"]}
+    }
   },
   "selection_rules": [
     "Choose the layout from the message type, not from how decorative it looks.",
@@ -13,7 +20,8 @@
     "Use medium density for normal body slides; reserve sparse layouts for deliberate covers, dividers, quotes, and pauses.",
     "Never shrink body text to rescue an overloaded layout; split the slide instead.",
     "Use a cover once, a divider only at a real chapter boundary, and a closing once.",
-    "Keep no more than two dark-green slides in succession unless the section is intentionally dramatic."
+    "Keep no more than two dark slides in succession unless the section is intentionally dramatic.",
+    "If brand colors are absent, select exactly one theme from the audience and scenario; do not ask a beginner to compare palettes."
   ],
   "style_archetypes": {
     "clear_defense": "White canvas, restrained institutional color, persistent chapter navigation, titled evidence zones, and explicit interpretation bands.",

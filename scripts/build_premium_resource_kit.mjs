@@ -52,24 +52,32 @@ const args = Object.fromEntries(process.argv.slice(2).reduce((rows, value, index
   return rows;
 }, []));
 const assetsDir = path.resolve(args.assets || path.join(HERE, "../assets"));
-const outFile = path.resolve(args.out || path.join(assetsDir, "premium-green-layout-kit.pptx"));
-const previewFile = path.resolve(args.preview || path.join(assetsDir, "premium-green-layout-kit-preview.webp"));
-const qaDir = path.resolve(args.qa || path.join(process.cwd(), "work", "premium-ppt-qa"));
-
-const C = {
-  ink: "#162019",
-  forest: "#0B3B2A",
-  green: "#1D6B43",
-  green2: "#2D8355",
-  sage: "#AFC3B2",
-  pale: "#E7EFE8",
-  cream: "#F7F3EA",
-  gold: "#D89A2B",
-  gold2: "#F0C56A",
-  gray: "#667168",
-  line: "#CBD5CC",
-  white: "#FFFFFF",
+const THEMES = {
+  "green-gold": {
+    fileStem: "premium-green-layout-kit",
+    colors: { ink: "#162019", forest: "#0B3B2A", green: "#1D6B43", green2: "#2D8355", sage: "#AFC3B2", onDarkMuted: "#D7E2D8", pale: "#E7EFE8", cream: "#F7F3EA", gold: "#D89A2B", gold2: "#F0C56A", gray: "#667168", line: "#CBD5CC", white: "#FFFFFF", tint: "#F1E7CF", dark2: "#123F30", riskLow: "#F5E4BC", riskMid: "#EBC17A" },
+  },
+  "academic-blue": {
+    fileStem: "premium-blue-layout-kit",
+    colors: { ink: "#172235", forest: "#173A5E", green: "#2E5D91", green2: "#4B78A8", sage: "#B8C9DA", onDarkMuted: "#D9E5EF", pale: "#E8EFF6", cream: "#F7F9FB", gold: "#C58A32", gold2: "#E5C582", gray: "#657282", line: "#CCD6E0", white: "#FFFFFF", tint: "#E8EEF7", dark2: "#1F456C", riskLow: "#E7EEF5", riskMid: "#C7D8E8" },
+  },
+  "institutional-red": {
+    fileStem: "premium-red-layout-kit",
+    colors: { ink: "#25191B", forest: "#681F2C", green: "#9A3040", green2: "#B64B59", sage: "#D9BBC0", onDarkMuted: "#EEDBDE", pale: "#F2E7E9", cream: "#FBF8F5", gold: "#BF8850", gold2: "#E2BE92", gray: "#73686A", line: "#DDCED1", white: "#FFFFFF", tint: "#F3E5E2", dark2: "#782A37", riskLow: "#F5E9E4", riskMid: "#E7C3B6" },
+  },
+  "consulting-purple": {
+    fileStem: "premium-purple-layout-kit",
+    colors: { ink: "#211A26", forest: "#392846", green: "#684C7D", green2: "#81649A", sage: "#C9BFD0", onDarkMuted: "#E4DCE8", pale: "#EFEAF2", cream: "#F8F6F8", gold: "#C99A4A", gold2: "#E6CA8E", gray: "#6E6872", line: "#D8D0DB", white: "#FFFFFF", tint: "#EEE6F2", dark2: "#493658", riskLow: "#F2EDF4", riskMid: "#D9CCE0" },
+  },
 };
+const aliases = { green: "green-gold", blue: "academic-blue", red: "institutional-red", purple: "consulting-purple" };
+const themeId = aliases[args.theme] || args.theme || "green-gold";
+const theme = THEMES[themeId];
+if (!theme) throw new Error(`Unknown theme "${themeId}". Use: ${Object.keys(THEMES).join(", ")}`);
+const C = theme.colors;
+const outFile = path.resolve(args.out || path.join(assetsDir, `${theme.fileStem}.pptx`));
+const previewFile = path.resolve(args.preview || path.join(assetsDir, `${theme.fileStem}-preview.webp`));
+const qaDir = path.resolve(args.qa || path.join(process.cwd(), "work", `premium-ppt-qa-${themeId}`));
 const FONT = "Microsoft YaHei";
 const SERIF = "Georgia";
 const W = 1280;
@@ -118,13 +126,13 @@ function base(slide, number, dark = false, label = "PREMIUM LAYOUT KIT") {
   slide.background.fill = dark ? C.forest : C.cream;
   rect(slide, 72, 34, 44, 4, dark ? C.gold : C.green);
   text(slide, label, 128, 26, 310, 24, { size: 12, bold: true, color: dark ? C.pale : C.gray });
-  text(slide, String(number).padStart(2, "0"), 1160, 670, 48, 20, { size: 12, color: dark ? C.sage : C.gray, align: "right" });
+  text(slide, String(number).padStart(2, "0"), 1160, 670, 48, 20, { size: 12, color: dark ? C.onDarkMuted : C.gray, align: "right" });
 }
 
 function titleBlock(slide, kicker, titleValue, subtitle = "", dark = false) {
   text(slide, kicker.toUpperCase(), 72, 78, 360, 24, { size: 13, bold: true, color: C.gold });
   text(slide, titleValue, 72, 112, 870, 82, { size: 42, bold: true, color: dark ? C.white : C.ink, lineSpacing: 0.92 });
-  if (subtitle) text(slide, subtitle, 72, 202, 820, 52, { size: 18, color: dark ? C.sage : C.gray });
+  if (subtitle) text(slide, subtitle, 72, 202, 820, 52, { size: 18, color: dark ? C.onDarkMuted : C.gray });
 }
 
 function smallRule(slide, x, y, w, color = C.green) {
@@ -135,7 +143,7 @@ function addBullet(slide, index, heading, body, x, y, width, dark = false) {
   rect(slide, x, y + 3, 30, 30, dark ? C.gold : C.green, { geometry: "ellipse" });
   text(slide, String(index).padStart(2, "0"), x, y + 8, 30, 18, { size: 11, bold: true, color: dark ? C.forest : C.white, align: "center" });
   text(slide, heading, x + 44, y, width - 44, 30, { size: 19, bold: true, color: dark ? C.white : C.ink });
-  text(slide, body, x + 44, y + 36, width - 44, 58, { size: 15, color: dark ? C.sage : C.gray });
+  text(slide, body, x + 44, y + 36, width - 44, 58, { size: 15, color: dark ? C.onDarkMuted : C.gray });
 }
 
 async function writeBlob(file, blob) {
@@ -177,7 +185,7 @@ const p = Presentation.create({ slideSize: { width: W, height: H } });
   rect(s, 1148, 64, 60, 6, C.gold);
   text(s, "SCIENCE / RESEARCH", 790, 104, 418, 24, { size: 13, bold: true, color: C.gold, align: "right" });
   text(s, "从问题出发，\n让证据说话", 740, 166, 468, 136, { size: 48, bold: true, color: C.white, align: "right", lineSpacing: 0.9 });
-  text(s, "学术报告 · 论文答辩 · 技术分享", 796, 338, 412, 34, { size: 18, color: C.sage, align: "right" });
+  text(s, "学术报告 · 论文答辩 · 技术分享", 796, 338, 412, 34, { size: 18, color: C.onDarkMuted, align: "right" });
   text(s, "02", 1150, 646, 58, 24, { size: 16, bold: true, color: C.gold, align: "right", typeface: SERIF });
 }
 
@@ -199,13 +207,13 @@ const p = Presentation.create({ slideSize: { width: W, height: H } });
   text(s, "01", 72, 118, 310, 186, { size: 132, bold: true, color: C.gold, typeface: SERIF });
   smallRule(s, 72, 330, 186, C.sage);
   text(s, "先确定故事，\n再选择版式", 402, 166, 670, 126, { size: 46, bold: true, color: C.white, lineSpacing: 0.92 });
-  text(s, "章节页负责切换节奏，不承担解释任务。", 406, 328, 618, 44, { size: 18, color: C.sage });
+  text(s, "章节页负责切换节奏，不承担解释任务。", 406, 328, 618, 44, { size: 18, color: C.onDarkMuted });
   [["01", "CONTEXT", "为什么现在重要"], ["02", "EVIDENCE", "哪些事实支持判断"], ["03", "ACTION", "下一步需要做什么"]].forEach(([n, h, b], i) => {
     const x = 404 + i * 252;
     smallRule(s, x, 416, 214, i === 1 ? C.gold : C.sage);
     text(s, n, x, 434, 34, 24, { size: 14, bold: true, color: C.gold, typeface: SERIF });
     text(s, h, x + 42, 432, 164, 26, { size: 14, bold: true, color: C.white });
-    text(s, b, x, 474, 214, 44, { size: 14, color: C.sage });
+    text(s, b, x, 474, 214, 44, { size: 14, color: C.onDarkMuted });
   });
   rect(s, 0, 594, 1280, 126, C.gold);
   text(s, "STRUCTURE BEFORE DECORATION", 72, 630, 700, 36, { size: 18, bold: true, color: C.forest });
@@ -219,7 +227,7 @@ const p = Presentation.create({ slideSize: { width: W, height: H } });
   const items = [["01", "背景", "为什么现在必须讨论"], ["02", "洞察", "证据揭示了什么"], ["03", "方案", "我们准备如何行动"], ["04", "结果", "成功将如何衡量"]];
   items.forEach(([n, h, b], i) => {
     const x = 72 + i * 284;
-    rect(s, x, 292, 260, 322, i === 1 ? "#F1E7CF" : C.white, { line: C.line, lineWidth: 1 });
+    rect(s, x, 292, 260, 322, i === 1 ? C.tint : C.white, { line: C.line, lineWidth: 1 });
     rect(s, x, 292, 260, 7, i === 1 ? C.gold : C.green);
     text(s, n, x + 22, 324, 92, 66, { size: 46, bold: true, color: i === 1 ? C.gold : C.green, typeface: SERIF });
     text(s, h, x + 22, 404, 210, 36, { size: 24, bold: true });
@@ -247,7 +255,7 @@ const p = Presentation.create({ slideSize: { width: W, height: H } });
     if (i) smallRule(s, 852, y - 22, 324, C.green2);
     text(s, h, 852, y, 54, 28, { size: 16, bold: true, color: C.gold, typeface: SERIF });
     text(s, b, 916, y - 2, 250, 30, { size: 20, bold: true, color: C.white });
-    text(s, points[i][2], 916, y + 38, 250, 54, { size: 15, color: C.sage });
+    text(s, points[i][2], 916, y + 38, 250, 54, { size: 15, color: C.onDarkMuted });
   });
 }
 
@@ -266,7 +274,7 @@ const p = Presentation.create({ slideSize: { width: W, height: H } });
     rect(s, 752, y, 420, 92, i === 1 ? C.forest : C.white, { line: i === 1 ? C.forest : C.line, lineWidth: 1 });
     text(s, n, 772, y + 18, 44, 24, { size: 14, bold: true, color: i === 1 ? C.gold : C.green, typeface: SERIF });
     text(s, h, 828, y + 14, 310, 28, { size: 19, bold: true, color: i === 1 ? C.white : C.ink });
-    text(s, b, 828, y + 48, 310, 30, { size: 14, color: i === 1 ? C.sage : C.gray });
+    text(s, b, 828, y + 48, 310, 30, { size: 14, color: i === 1 ? C.onDarkMuted : C.gray });
   });
   text(s, "一张图 + 一个判断 + 三条解释", 752, 626, 420, 24, { size: 13, bold: true, color: C.green });
 }
@@ -283,7 +291,7 @@ const p = Presentation.create({ slideSize: { width: W, height: H } });
     rect(s, x, 534, 342, 78, i === 1 ? C.forest : C.white, { line: C.line, lineWidth: 1 });
     text(s, n, x + 18, 552, 44, 22, { size: 14, bold: true, color: C.gold, typeface: SERIF });
     text(s, h, x + 66, 548, 100, 28, { size: 19, bold: true, color: i === 1 ? C.white : C.ink });
-    text(s, b, x + 18, 582, 300, 22, { size: 13, color: i === 1 ? C.sage : C.gray });
+    text(s, b, x + 18, 582, 300, 22, { size: 13, color: i === 1 ? C.onDarkMuted : C.gray });
   });
 }
 
@@ -300,9 +308,9 @@ const p = Presentation.create({ slideSize: { width: W, height: H } });
     rect(s, x, 292, 342, 8, dark ? C.gold : C.green);
     text(s, metric, x + 24, 330, 292, 78, { size: 52, bold: true, color: dark ? C.gold : C.green, typeface: SERIF });
     text(s, h, x + 24, 430, 292, 34, { size: 22, bold: true, color: dark ? C.white : C.ink });
-    text(s, b, x + 24, 484, 292, 72, { size: 16, color: dark ? C.sage : C.gray });
+    text(s, b, x + 24, 484, 292, 72, { size: 16, color: dark ? C.onDarkMuted : C.gray });
     smallRule(s, x + 24, 570, 52, dark ? C.gold : C.green);
-    text(s, ["SIGNAL / DEMAND", "SIGNAL / SPEED", "SIGNAL / CONTROL"][i], x + 24, 584, 260, 20, { size: 11, bold: true, color: dark ? C.sage : C.gray });
+    text(s, ["SIGNAL / DEMAND", "SIGNAL / SPEED", "SIGNAL / CONTROL"][i], x + 24, 584, 260, 20, { size: 11, bold: true, color: dark ? C.onDarkMuted : C.gray });
   });
 }
 
@@ -318,16 +326,16 @@ const p = Presentation.create({ slideSize: { width: W, height: H } });
     rect(s, x, 340, 70, 70, i === 2 ? C.gold : C.green2, { geometry: "ellipse" });
     text(s, n, x, 361, 70, 28, { size: 18, bold: true, color: i === 2 ? C.forest : C.white, align: "center", typeface: SERIF });
     text(s, h, x, 440, 230, 34, { size: 22, bold: true, color: C.white });
-    text(s, b, x, 490, 224, 52, { size: 15, color: C.sage });
+    text(s, b, x, 490, 224, 52, { size: 15, color: C.onDarkMuted });
   });
-  rect(s, 0, 584, 1280, 136, "#123F30");
+  rect(s, 0, 584, 1280, 136, C.dark2);
   [["INPUT", "原始材料"], ["MAP", "故事结构"], ["LAYOUT", "可编辑页面"], ["QA", "渲染成品"]].forEach(([k, v], i) => {
     const x = 72 + i * 284;
     if (i) rect(s, x - 22, 612, 1, 62, C.green2);
     text(s, k, x, 612, 100, 22, { size: 11, bold: true, color: C.gold });
     text(s, v, x, 642, 220, 30, { size: 18, bold: true, color: C.white });
   });
-  text(s, "10", 1160, 680, 48, 20, { size: 12, color: C.sage, align: "right" });
+  text(s, "10", 1160, 680, 48, 20, { size: 12, color: C.onDarkMuted, align: "right" });
 }
 
 // 11 — timeline
@@ -401,7 +409,7 @@ const p = Presentation.create({ slideSize: { width: W, height: H } });
   rect(s, 838, 314, 338, 230, C.forest, { radius: "rounded-2xl" });
   text(s, "+34pt", 878, 348, 250, 72, { size: 46, bold: true, color: C.gold, typeface: SERIF });
   text(s, "复用带来的质量增益", 878, 438, 250, 32, { size: 20, bold: true, color: C.white });
-  text(s, "把经验写进资源，而不是留在个人记忆里。", 878, 486, 250, 50, { size: 15, color: C.sage });
+  text(s, "把经验写进资源，而不是留在个人记忆里。", 878, 486, 250, 50, { size: 15, color: C.onDarkMuted });
 }
 
 // 15 — doughnut chart
@@ -440,7 +448,7 @@ const p = Presentation.create({ slideSize: { width: W, height: H } });
     rect(s, x, 318, 242, 222, i === 2 ? C.gold : C.green2, { radius: "rounded-2xl" });
     text(s, String(i + 1).padStart(2, "0"), x + 28, 342, 72, 32, { size: 18, bold: true, color: i === 2 ? C.forest : C.gold, typeface: SERIF });
     text(s, h, x + 28, 398, 184, 36, { size: 24, bold: true, color: i === 2 ? C.forest : C.white });
-    text(s, b, x + 28, 456, 184, 58, { size: 16, color: i === 2 ? C.forest : C.sage, lineSpacing: 1.18 });
+    text(s, b, x + 28, 456, 184, 58, { size: 16, color: i === 2 ? C.forest : C.onDarkMuted, lineSpacing: 1.18 });
   });
 }
 
@@ -467,7 +475,7 @@ const p = Presentation.create({ slideSize: { width: W, height: H } });
   const s = p.slides.add();
   base(s, 18, false, "RISK MATRIX");
   titleBlock(s, "Risk + response", "风险页必须同时给出应对方式", "只标红问题没有价值；明确触发条件、负责人和动作。", false);
-  const colors = [[C.pale, C.pale, "#F5E4BC"], [C.pale, "#F5E4BC", "#EBC17A"], ["#F5E4BC", "#EBC17A", C.gold]];
+  const colors = [[C.pale, C.pale, C.riskLow], [C.pale, C.riskLow, C.riskMid], [C.riskLow, C.riskMid, C.gold]];
   colors.forEach((row, r) => row.forEach((color, c) => rect(s, 118 + c * 130, 336 + (2 - r) * 90, 118, 78, color, { radius: "rounded-md" })));
   text(s, "影响", 72, 292, 70, 24, { size: 14, bold: true, color: C.gray });
   text(s, "发生概率 →", 118, 620, 378, 24, { size: 14, bold: true, color: C.gray, align: "center" });
@@ -486,8 +494,8 @@ const p = Presentation.create({ slideSize: { width: W, height: H } });
   text(s, "“", 72, 118, 110, 96, { size: 88, bold: true, color: C.gold, typeface: SERIF });
   text(s, "用户不需要学会设计，\n只需要把真实材料\n交给系统。", 150, 158, 640, 190, { size: 44, bold: true, color: C.white, lineSpacing: 0.92 });
   smallRule(s, 152, 382, 220, C.sage);
-  text(s, "— 资源型 skill 的产品原则", 152, 414, 560, 32, { size: 18, color: C.sage });
-  rect(s, 846, 112, 362, 472, "#123F30", { line: C.green2, lineWidth: 1 });
+  text(s, "— 资源型 skill 的产品原则", 152, 414, 560, 32, { size: 18, color: C.onDarkMuted });
+  rect(s, 846, 112, 362, 472, C.dark2, { line: C.green2, lineWidth: 1 });
   const stats = [["1", "推荐方向"], ["2", "必要问题上限"], ["100%", "逐页渲染质检"]];
   stats.forEach(([n, h], i) => {
     const y = 154 + i * 128;
@@ -531,4 +539,4 @@ const pptx = await PresentationFile.exportPptx(p);
 await fs.mkdir(path.dirname(outFile), { recursive: true });
 await pptx.save(outFile);
 await fs.rm(`${outFile}.inspect.ndjson`, { force: true });
-console.log(JSON.stringify({ outFile, previewFile, slides: p.slides.items.length }));
+console.log(JSON.stringify({ theme: themeId, outFile, previewFile, slides: p.slides.items.length }));

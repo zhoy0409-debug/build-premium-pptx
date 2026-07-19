@@ -5,7 +5,7 @@
 **把材料交进来，把可编辑的高级 PPT 拿走。**  
 **Drop in your content. Get a polished, editable presentation.**
 
-`Beginner-first` · `Editable PPTX` · `Automatic storytelling` · `Render QA`
+`Beginner-first` · `4 auto-selected themes` · `Editable PPTX` · `Render QA`
 
 </div>
 
@@ -24,6 +24,21 @@ This is not another template dump. Give the Skill a document, spreadsheet, resea
 | 必须保留的数据和引用 / Required facts and sources | 版式、配色、字体、配图与图表 / Layouts, colors, typography, visuals, charts |
 | 一句“我不会，你直接决定” / “I am new—choose for me” | 一个推荐方向，不让用户做专业选择 / One recommended direction |
 
+## 四套主题，自动匹配 / Four auto-selected themes
+
+Skill 会根据听众、场景和材料自动选择一套主题；如果有品牌色，则优先服从品牌。用户不需要先懂配色。
+
+The Skill selects one theme from the audience, scenario, and content. Supplied brand colors always take priority—beginners never need to compare palettes.
+
+![Four editable presentation themes](./assets/showcase-themes.png)
+
+| 主题 / Theme | 推荐场景 / Best for | 可编辑资源 / Editable kit |
+|---|---|---|
+| 黄绿自然 / Green-gold | 工作汇报、项目、教育、可持续发展 | [下载 / Download](./assets/premium-green-layout-kit.pptx) |
+| 深蓝学术 / Academic blue | 答辩、科研、技术分享 | [下载 / Download](./assets/premium-blue-layout-kit.pptx) |
+| 红白院校 / Institutional red | 高校、公共机构、正式评审 | [下载 / Download](./assets/premium-red-layout-kit.pptx) |
+| 紫灰咨询 / Consulting purple | 战略、数据分析、商业汇报 | [下载 / Download](./assets/premium-purple-layout-kit.pptx) |
+
 ## 真实版式效果 / Real layout previews
 
 下面全部来自仓库内的可编辑 PPTX 实际渲染结果，不是概念图。正文页采用信息完整的中高密度编辑式版面，同时保留清晰层级与呼吸感。
@@ -36,12 +51,14 @@ Every preview below is rendered from the editable PPTX included in this reposito
 
 ![Editable presentation layout gallery](./assets/showcase-layouts.png)
 
-**[下载 20 页可编辑资源包 / Download the editable 20-slide kit](./assets/premium-green-layout-kit.pptx)**
+每套均包含 20 页可编辑版式，共 80 页；展示图与下载文件来自同一生成器。
+
+Each theme includes 20 editable layouts—80 pages total. The previews and downloadable decks come from the same generator.
 
 ## 内置能力 / What is included
 
-- 20 页原创 16:9 黄绿视觉系统：封面、章节、目录、图文、流程、时间线、对比、研究方法、矩阵、结尾等；  
-  20 original 16:9 layouts covering covers, sections, agenda, visual evidence, process, timeline, comparison, research, matrices, and closing.
+- 4 套原创 16:9 视觉系统，每套 20 页：封面、章节、目录、图文、流程、时间线、对比、研究方法、矩阵、结尾等；
+  Four original 16:9 systems with 20 layouts each, covering covers, sections, agenda, evidence, process, timeline, comparison, research, matrices, and closing.
 - 3 类原生可编辑图表：柱状图、折线图、环形图；  
   Editable native bar, line, and doughnut charts.
 - 工作汇报、答辩、项目提案、科研分享和管理层简报的自动选页配方；  
@@ -97,7 +114,7 @@ The Skill can privately search templates the user is authorized to use. Purchase
 ```text
 SKILL.md                              Core autopilot workflow
 agents/openai.yaml                    Codex UI metadata
-assets/premium-green-layout-kit.pptx  Editable presentation resource kit
+assets/premium-*-layout-kit.pptx      Four editable 20-slide theme kits
 assets/showcase-*.png                 Rendered README previews
 references/layout-recipes.json        Layout and scenario selection rules
 references/aesthetic-patterns.md      Reusable visual grammars and dense-slide patterns

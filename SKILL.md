@@ -1,6 +1,6 @@
 ---
 name: build-premium-pptx
-description: Turn rough notes, documents, spreadsheets, research materials, or an existing deck into a polished editable PowerPoint with almost no design decisions required from the user. Uses a built-in original 20-slide green-and-gold layout kit by default, can privately mine a local template library when useful, automatically organizes the story, matches content to layouts, adds relevant visuals, and renders every slide for QA. Use for PPT制作, PPT美化, 工作汇报, 答辩PPT, 学术报告, 科研分享, 项目提案, pitch decks, reports, and users who say they are bad at design, organization, or PowerPoint.
+description: Turn rough notes, documents, spreadsheets, research materials, or an existing deck into a polished editable PowerPoint with almost no design decisions required from the user. Uses four original 20-slide theme kits and automatically selects green-gold, academic blue, institutional red, or consulting purple; can privately mine a local template library when useful, organizes the story, matches content to layouts, adds relevant visuals, and renders every slide for QA. Use for PPT制作, PPT美化, 工作汇报, 答辩PPT, 学术报告, 科研分享, 项目提案, pitch decks, reports, and users who say they are bad at design, organization, or PowerPoint.
 ---
 
 # Build Premium PPTX
@@ -21,9 +21,16 @@ Before storyboarding, read:
 - [references/aesthetic-patterns.md](references/aesthetic-patterns.md) for research, consulting, institutional, and scientific visual grammars;
 - [references/design-and-qa.md](references/design-and-qa.md) for design, data-integrity, and render checks.
 
-The default visual resource is [assets/premium-green-layout-kit.pptx](assets/premium-green-layout-kit.pptx). It contains 20 original, editable 16:9 layouts with medium-to-high-density editorial body pages: three covers, section, agenda, thesis, image/text, gallery, evidence, process, timeline, comparison, three native charts, research method, findings matrix, risk matrix, quote, and closing. Its three hero images are replaceable assets in `assets/`.
+The built-in system contains four original, editable 16:9 theme kits. Each has the same 20 medium-to-high-density layouts, native charts, and replaceable hero images.
 
-Use the built-in kit first. A private local template library is an optional source of extra layout ideas, not a prerequisite and not a choice the user must make.
+| Theme | Resource | Select by default for |
+|---|---|---|
+| Green-gold | [assets/premium-green-layout-kit.pptx](assets/premium-green-layout-kit.pptx) | work reports, projects, education, sustainability |
+| Academic blue | [assets/premium-blue-layout-kit.pptx](assets/premium-blue-layout-kit.pptx) | thesis defenses, research, technical talks |
+| Institutional red | [assets/premium-red-layout-kit.pptx](assets/premium-red-layout-kit.pptx) | universities, public institutions, formal reviews |
+| Consulting purple | [assets/premium-purple-layout-kit.pptx](assets/premium-purple-layout-kit.pptx) | strategy, analytics, business and executive briefs |
+
+Use exactly one theme per deck. If the user supplies brand colors, follow them; otherwise infer the theme from the audience and scenario and give one recommended result. Do not ask a beginner to compare palettes. A private local template library is optional, not a prerequisite.
 
 ## Beginner contract
 
@@ -85,7 +92,7 @@ Each slide must answer one audience question and communicate one takeaway. Write
 
 Identify the closest scenario in `scenario_recipes` inside [references/layout-recipes.json](references/layout-recipes.json), then adjust the recipe to the actual evidence. Map every storyboard row to a layout by message type, not by decoration.
 
-Choose one `style_archetype` and apply its navigation, evidence-container, density, and branding rules consistently. Do not mix archetypes slide by slide.
+Choose one theme from `resource.themes` and one `style_archetype`. Apply their navigation, evidence-container, density, branding, and color rules consistently. Do not mix themes or archetypes slide by slide.
 
 Examples:
 
@@ -125,8 +132,10 @@ Treat purchased or user-provided templates as private inputs. Reuse them locally
 When the environment provides `@oai/artifact-tool`, use it for programmatic slide creation and editing. The original resource kit can be regenerated with:
 
 ```bash
-node scripts/build_premium_resource_kit.mjs --assets assets --out assets/premium-green-layout-kit.pptx
+node scripts/build_premium_resource_kit.mjs --assets assets --theme green-gold
 ```
+
+Use `--theme green-gold|academic-blue|institutional-red|consulting-purple` to rebuild a specific bundled kit.
 
 Do not replace the presentation workflow with `python-pptx` when the environment's presentation tooling requires artifact-tool or native PowerPoint.
 
