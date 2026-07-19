@@ -1,6 +1,6 @@
 ---
 name: build-premium-pptx
-description: Turn rough notes, documents, spreadsheets, research materials, or an existing deck into a polished editable PowerPoint with almost no design decisions required from the user. Uses four original 20-slide theme kits and automatically selects green-gold, academic blue, institutional red, or consulting purple; can privately mine a local template library when useful, organizes the story, matches content to layouts, adds relevant visuals, and renders every slide for QA. Use for PPT制作, PPT美化, 工作汇报, 答辩PPT, 学术报告, 科研分享, 项目提案, pitch decks, reports, and users who say they are bad at design, organization, or PowerPoint.
+description: Turn rough notes, documents, spreadsheets, research materials, or an existing deck into a polished editable PowerPoint with almost no design decisions required from the user. Uses four original 20-slide theme kits and automatically selects green-gold, academic blue, institutional red, or consulting purple; can privately mine a local template library when useful, organizes the story, matches content to layouts, adds relevant visuals, and renders every slide for QA. Use for PPT制作, PPT美化, 工作汇报, 答辩PPT, 学术报告, 科研分享, 文献汇报, 研究生讲座, 项目提案, pitch decks, reports, and users who say they are bad at design, organization, or PowerPoint.
 ---
 
 # Build Premium PPTX
@@ -97,11 +97,15 @@ Choose one theme from `resource.themes` and one `style_archetype`. Apply their n
 Examples:
 
 - thesis defense -> science cover, central thesis, research method, visual evidence, editable charts, findings, risks, closing;
+- long research lecture -> promise, system map, sparse chapter pause, module cards, tool comparison, workflow, evidence, chapter synthesis, closing rule;
+- journal club or literature review -> paper identity, essential background, new question, method, figure evidence, result summary, next question, integrated mechanism, limitations;
 - work report -> nature cover, thesis, agenda, evidence, process, timeline, results charts, closing;
 - proposal -> strategy cover, problem, evidence, plan, comparison, economics, risk response, decision;
 - short executive brief -> strategy cover, decision thesis, three signals, comparison, one chart, risks, action.
 
 Respect every layout's `slots` limit. Replace sample copy, data, labels, and images; do not merely place new content on top. Use the deck as a layout bank: duplicate only the selected slides into the final deck and remove unused resource pages.
+
+For a long technical lecture, `research_operating_system` may use a consistent dark canvas across the full deck; add sparse chapter dividers and verify projector contrast. For a paper review, use `figure_first_paper_review` and repeat the question → evidence → direct finding → next question loop. Do not force either archetype onto a short general-audience talk.
 
 ## 4. Use a private template library only when it adds value
 

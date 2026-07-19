@@ -42,6 +42,20 @@ Density is earned by structure, not by smaller text. If the hierarchy fails at t
 - Repeat one visual motif across the deck—molecular structure, anatomical line art, network, or material texture—without using it as decoration on every slide.
 - Best for paper interpretation, journal club, biomedical talk, and research communication.
 
+### Research operating system / 科研系统型
+
+- Use one deep navy canvas across a long technical lecture, with cyan or teal as the structural accent and a small set of semantic colors for tools, stages, or evidence classes.
+- Treat the deck like a coherent interface: stable title position, thin frame lines, numbered modules, compact cards, and deliberate chapter pauses.
+- Alternate dense system pages with sparse chapter dividers so a 30–70-page talk still has rhythm. A dark slide is not automatically dramatic; consistency and projection contrast make it usable for long-form teaching.
+- Best for research methods, software workflows, AI-assisted research, technical training, and tool-heavy graduate lectures.
+
+### Figure-first paper review / 图表优先文献汇报型
+
+- Use a white evidence canvas, one restrained oxblood or institutional-red accent, a thin title rule, and a fixed slide-number chip.
+- Let the original experiment figure dominate; added text should identify the question, method, result, and interpretation rather than repeat the paper caption.
+- Repeat a scientific reasoning loop: new question → experiment or figure → result summary → next question. Use a clean mechanism diagram after each evidence cluster to reset understanding.
+- Best for journal club, literature review, lab meeting, biomedical paper interpretation, and experimental result reporting.
+
 ## Reusable page grammars
 
 | Pattern | Structure | Use when |
@@ -58,6 +72,34 @@ Density is earned by structure, not by smaller text. If the hierarchy fails at t
 | Formula story | Input/condition + mechanism/evidence = result/decision | A compact causal or strategic argument is needed |
 | Risk and response | Risk map on the left + matched mitigation table on the right | Every flagged risk needs an owner or action |
 | Scientific cover | Editorial title + hero diagram + topic tags + citation/source | The topic itself has a recognisable scientific object |
+| Research OS module grid | Stable dark frame + numbered cards + semantic accent per module | A long technical lecture compares tools, stages, prompts, or methods |
+| Result reasoning loop | New question → evidence figure → direct finding → next question | A paper review must preserve the logic connecting multiple experiments |
+| Figure summary reset | Simplified mechanism diagram + one-sentence conclusion band | Several dense result slides need a comprehension checkpoint |
+
+## Narrative rhythm for research decks
+
+### Long-form technical lecture
+
+1. Open with the promise, not a generic topic label.
+2. Show a compact map of the full system or workflow.
+3. Use a sparse divider at every genuine conceptual shift.
+4. Within each chapter, alternate principle cards, tool comparisons, workflow diagrams, evidence screenshots, and one synthesis page.
+5. End each chapter with a reusable rule, checklist, or decision—not another recap paragraph.
+
+### Journal club or literature review
+
+1. Identify the paper, the biological or technical problem, and why the question matters.
+2. Build only the background required to understand the first experiment.
+3. For each result cluster, repeat: question → experimental evidence → result → short mechanism summary.
+4. Separate what the authors showed from what the presenter infers.
+5. Close with one integrated mechanism, limitations, and future work.
+
+## Semantic color discipline
+
+- Use one structural accent throughout the deck and at most four semantic accents inside analytical components.
+- Reuse a semantic color for the same meaning across slides: input, method, warning, finding, or action.
+- Do not color scientific figures merely to match the theme. Preserve data meaning first; use the presentation accent in labels, frames, and annotations around the figure.
+- On dark canvases, verify body text, thin strokes, chart labels, and screenshots at projector contrast—not only on a laptop display.
 
 ## Evidence container rule
 

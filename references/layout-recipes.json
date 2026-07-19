@@ -1,5 +1,5 @@
 {
-  "version": 1,
+  "version": 2,
   "resource": {
     "file": "../assets/premium-green-layout-kit.pptx",
     "default_theme": "green-gold",
@@ -20,14 +20,16 @@
     "Use medium density for normal body slides; reserve sparse layouts for deliberate covers, dividers, quotes, and pauses.",
     "Never shrink body text to rescue an overloaded layout; split the slide instead.",
     "Use a cover once, a divider only at a real chapter boundary, and a closing once.",
-    "Keep no more than two dark slides in succession unless the section is intentionally dramatic.",
+    "In a light system, keep no more than two dark slides in succession unless the section is intentionally dramatic; a deliberate research-operating-system archetype may remain dark throughout when projector contrast and chapter pauses pass QA.",
     "If brand colors are absent, select exactly one theme from the audience and scenario; do not ask a beginner to compare palettes."
   ],
   "style_archetypes": {
     "clear_defense": "White canvas, restrained institutional color, persistent chapter navigation, titled evidence zones, and explicit interpretation bands.",
     "consulting_nerdy": "Dense analytical canvas with claim headlines, spatial zones, direct annotations, and one decision implication.",
     "institutional_research": "Stable logo safe area, consistent header or section rail, neutral evidence canvas, and disciplined brand color.",
-    "scientific_editorial": "Editorial scientific cover, pale evidence pages, numbered sections, schematic diagrams, direct finding statements, and source lines."
+    "scientific_editorial": "Editorial scientific cover, pale evidence pages, numbered sections, schematic diagrams, direct finding statements, and source lines.",
+    "research_operating_system": "Deep navy canvas, cyan structural lines, semantic accent colors, numbered modules, stable interface-like frames, and sparse chapter pauses.",
+    "figure_first_paper_review": "White evidence canvas, oxblood accent, fixed title rule and slide number, dominant scientific figures, and repeated question-evidence-summary loops."
   },
   "layouts": [
     {"slide": 1, "id": "cover-nature", "role": "cover", "best_for": ["work report", "project proposal", "education", "sustainability"], "slots": "title <= 16 Chinese chars; subtitle <= 24 chars", "replace": ["title", "subtitle", "hero image"]},
@@ -57,6 +59,8 @@
     "project_proposal": [3, 6, 4, 7, 9, 10, 12, 13, 18, 20],
     "training_or_science_short_8min": [2, 6, 7, 16, 9, 17, 18, 20],
     "training_or_science": [2, 5, 7, 8, 10, 11, 16, 17, 19, 20],
+    "research_lecture_longform": [2, 6, 5, 4, 9, 10, 12, 16, 7, 19, 4, 9, 13, 14, 17, 18, 20],
+    "journal_club_or_literature_review": [2, 5, 7, 6, 16, 7, 13, 14, 6, 7, 13, 14, 6, 17, 18, 20],
     "executive_brief": [3, 6, 9, 12, 13, 18, 20]
   }
 }

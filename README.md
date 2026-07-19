@@ -106,8 +106,8 @@ Each theme includes 20 editable layouts—80 pages total. The previews and downl
   Editable native bar, line, and doughnut charts.
 - 工作汇报、答辩、项目提案、科研分享和管理层简报的自动选页配方；  
   Automatic recipes for reports, thesis defenses, proposals, scientific talks, and executive briefs.
-- 4 套可复用审美语法：清晰答辩型、咨询数据型、院校品牌型、科学编辑型；
-  Four reusable visual grammars: clear defense, consulting data, institutional research, and scientific editorial.
+- 6 套可复用审美语法：清晰答辩、咨询数据、院校品牌、科学编辑、深色科研系统、图表优先文献汇报；
+  Six reusable visual grammars: clear defense, consulting data, institutional research, scientific editorial, dark research systems, and figure-first paper review.
 - 本地模板库目录工具，可批量检索页数、比例、图片、图表、动画、字体和主题色；  
   A local template cataloger that indexes slide count, aspect ratio, media, charts, animation, fonts, and theme colors.
 - 全套逐页渲染、溢出、遮挡、字体和裁切检查；  
