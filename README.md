@@ -41,13 +41,56 @@ The Skill selects one theme from the audience, scenario, and content. Supplied b
 
 ## 真实版式效果 / Real layout previews
 
-下面全部来自仓库内的可编辑 PPTX 实际渲染结果，不是概念图。正文页采用信息完整的中高密度编辑式版面，同时保留清晰层级与呼吸感。
+下面全部来自仓库内的可编辑 PPTX 实际渲染结果，不是概念图。这里展示的不只是四种配色，而是一套覆盖不同内容、场景和叙事任务的版式系统。
 
-Every preview below is rendered from the editable PPTX included in this repository—not a mockup. Body slides use a complete, medium-to-high-density editorial system with clear hierarchy.
+Every preview below is rendered from the editable PPTX included in this repository—not a mockup. This is more than four color themes: it is a layout system for different stories, content types, and presentation scenarios.
 
 ![Featured dense editorial layouts](./assets/showcase-featured.png)
 
-### 更多版式 / More layouts
+| 类别 / Category | 可用版式 / Layout choices |
+|---|---|
+| 开场与导航 / Opening & navigation | 封面、章节、目录、核心问题 / Covers, dividers, agenda, key question |
+| 观点与证据 / Claims & evidence | 三证据、图文论证、引用、结论 / Evidence cards, visual proof, quote, takeaway |
+| 流程与计划 / Process & planning | 四步流程、时间线、研究方法、路线图 / Process, timeline, method, roadmap |
+| 数据与洞察 / Data & insight | 柱状图、折线图、环形图、指标卡 / Bar, line, doughnut, KPI cards |
+| 分析与决策 / Analysis & decision | 对比、二维矩阵、风险矩阵、优先级 / Comparison, 2×2, risk, prioritization |
+| 收束与行动 / Closing & action | 总结、下一步、行动清单、结尾 / Summary, next steps, action list, closing |
+
+## 按场景浏览 / Browse by scenario
+
+### 学术答辩与科研 / Academic & research
+
+适合开题、答辩、论文解读、实验汇报和技术分享：从论点、证据、方法到数据、矩阵与风险，完整支撑一条研究叙事。
+
+For thesis defenses, research reviews, experiments, and technical talks—from thesis and evidence to methods, data, matrices, and risk.
+
+![Academic and research presentation gallery](./assets/showcase-academic.png)
+
+### 工作汇报与项目 / Work reports & projects
+
+适合周报、年度汇报、项目复盘、提案和培训：封面、目录、指标、流程、时间线、趋势与行动页可以直接组合。
+
+For reports, project reviews, proposals, and training—combine covers, agendas, metrics, process, timelines, trends, and next actions.
+
+![Work report and project presentation gallery](./assets/showcase-work-report.png)
+
+### 战略、数据与咨询 / Strategy, data & consulting
+
+适合管理层简报、战略分析和商业汇报：强调选择、对比、关键指标、矩阵、风险与决策，不靠装饰制造“高级感”。
+
+For executive briefs, strategy, and business analysis—built around choices, comparisons, metrics, matrices, risk, and decisions.
+
+![Strategy data and consulting presentation gallery](./assets/showcase-strategy.png)
+
+### 院校与正式评审 / Institutional & formal review
+
+适合高校、医院、实验室、公共机构和正式评审：兼顾组织感、可信度、信息密度与品牌气质。
+
+For universities, hospitals, labs, public institutions, and formal reviews—structured, credible, information-rich, and brand-ready.
+
+![Institutional and formal review presentation gallery](./assets/showcase-institutional.png)
+
+### 跨类别版式库 / Cross-category layout library
 
 ![Editable presentation layout gallery](./assets/showcase-layouts.png)
 
