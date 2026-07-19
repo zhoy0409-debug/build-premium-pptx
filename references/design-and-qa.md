@@ -18,6 +18,9 @@
 ## Visual system
 
 - Treat whitespace as structure. Use consistent margins of roughly 5–7% of the slide width.
+- Use purposeful whitespace, but avoid empty canvases. On normal body slides, occupy roughly 60–80% of the content frame with evidence or visual structure; add only elements that clarify the message.
+- Make information-rich slides readable at three speeds: takeaway in 5 seconds, evidence in 30 seconds, and supporting detail during Q&A.
+- High density must come from a stronger grid and grouped evidence, never from shrinking all text or pasting more figures.
 - Use a grid and align visible edges. Intentional overlap is acceptable; accidental near-alignment is not.
 - Keep two typefaces at most. Use the template's theme fonts before introducing replacements.
 - Use no more than four text sizes on a normal slide. As a practical floor, keep titles at 24 pt or larger, body text at 16 pt or larger, and citations at 9 pt or larger.

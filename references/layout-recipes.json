@@ -10,10 +10,17 @@
   "selection_rules": [
     "Choose the layout from the message type, not from how decorative it looks.",
     "Use one conclusion per slide and place that conclusion in the title.",
+    "Use medium density for normal body slides; reserve sparse layouts for deliberate covers, dividers, quotes, and pauses.",
     "Never shrink body text to rescue an overloaded layout; split the slide instead.",
     "Use a cover once, a divider only at a real chapter boundary, and a closing once.",
     "Keep no more than two dark-green slides in succession unless the section is intentionally dramatic."
   ],
+  "style_archetypes": {
+    "clear_defense": "White canvas, restrained institutional color, persistent chapter navigation, titled evidence zones, and explicit interpretation bands.",
+    "consulting_nerdy": "Dense analytical canvas with claim headlines, spatial zones, direct annotations, and one decision implication.",
+    "institutional_research": "Stable logo safe area, consistent header or section rail, neutral evidence canvas, and disciplined brand color.",
+    "scientific_editorial": "Editorial scientific cover, pale evidence pages, numbered sections, schematic diagrams, direct finding statements, and source lines."
+  },
   "layouts": [
     {"slide": 1, "id": "cover-nature", "role": "cover", "best_for": ["work report", "project proposal", "education", "sustainability"], "slots": "title <= 16 Chinese chars; subtitle <= 24 chars", "replace": ["title", "subtitle", "hero image"]},
     {"slide": 2, "id": "cover-science", "role": "cover", "best_for": ["thesis defense", "scientific talk", "technical sharing"], "slots": "title <= 16 Chinese chars; subtitle <= 24 chars", "replace": ["title", "subtitle", "hero image"]},

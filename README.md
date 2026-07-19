@@ -26,9 +26,13 @@ This is not another template dump. Give the Skill a document, spreadsheet, resea
 
 ## 真实版式效果 / Real layout previews
 
-下面全部来自仓库内的可编辑 PPTX 实际渲染结果，不是概念图。
+下面全部来自仓库内的可编辑 PPTX 实际渲染结果，不是概念图。正文页采用信息完整的中高密度编辑式版面，同时保留清晰层级与呼吸感。
 
-Every preview below is rendered from the editable PPTX included in this repository—not a mockup.
+Every preview below is rendered from the editable PPTX included in this repository—not a mockup. Body slides use a complete, medium-to-high-density editorial system with clear hierarchy.
+
+![Featured dense editorial layouts](./assets/showcase-featured.png)
+
+### 更多版式 / More layouts
 
 ![Editable presentation layout gallery](./assets/showcase-layouts.png)
 
@@ -42,6 +46,8 @@ Every preview below is rendered from the editable PPTX included in this reposito
   Editable native bar, line, and doughnut charts.
 - 工作汇报、答辩、项目提案、科研分享和管理层简报的自动选页配方；  
   Automatic recipes for reports, thesis defenses, proposals, scientific talks, and executive briefs.
+- 4 套可复用审美语法：清晰答辩型、咨询数据型、院校品牌型、科学编辑型；
+  Four reusable visual grammars: clear defense, consulting data, institutional research, and scientific editorial.
 - 本地模板库目录工具，可批量检索页数、比例、图片、图表、动画、字体和主题色；  
   A local template cataloger that indexes slide count, aspect ratio, media, charts, animation, fonts, and theme colors.
 - 全套逐页渲染、溢出、遮挡、字体和裁切检查；  
@@ -94,6 +100,7 @@ agents/openai.yaml                    Codex UI metadata
 assets/premium-green-layout-kit.pptx  Editable presentation resource kit
 assets/showcase-*.png                 Rendered README previews
 references/layout-recipes.json        Layout and scenario selection rules
+references/aesthetic-patterns.md      Reusable visual grammars and dense-slide patterns
 references/design-and-qa.md           Design, data, and QA rules
 scripts/catalog_pptx.py               Local template cataloger
 scripts/build_premium_resource_kit.mjs Reproducible resource-kit builder

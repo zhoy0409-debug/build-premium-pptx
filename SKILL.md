@@ -18,9 +18,10 @@ The user should not need to understand masters, grids, visual hierarchy, charts,
 Before storyboarding, read:
 
 - [references/layout-recipes.json](references/layout-recipes.json) for deterministic layout and scenario selection;
+- [references/aesthetic-patterns.md](references/aesthetic-patterns.md) for research, consulting, institutional, and scientific visual grammars;
 - [references/design-and-qa.md](references/design-and-qa.md) for design, data-integrity, and render checks.
 
-The default visual resource is [assets/premium-green-layout-kit.pptx](assets/premium-green-layout-kit.pptx). It contains 20 original, editable 16:9 layouts: three covers, section, agenda, thesis, image/text, gallery, evidence, process, timeline, comparison, three native charts, research method, findings matrix, risk matrix, quote, and closing. Its three hero images are replaceable assets in `assets/`.
+The default visual resource is [assets/premium-green-layout-kit.pptx](assets/premium-green-layout-kit.pptx). It contains 20 original, editable 16:9 layouts with medium-to-high-density editorial body pages: three covers, section, agenda, thesis, image/text, gallery, evidence, process, timeline, comparison, three native charts, research method, findings matrix, risk matrix, quote, and closing. Its three hero images are replaceable assets in `assets/`.
 
 Use the built-in kit first. A private local template library is an optional source of extra layout ideas, not a prerequisite and not a choice the user must make.
 
@@ -84,6 +85,8 @@ Each slide must answer one audience question and communicate one takeaway. Write
 
 Identify the closest scenario in `scenario_recipes` inside [references/layout-recipes.json](references/layout-recipes.json), then adjust the recipe to the actual evidence. Map every storyboard row to a layout by message type, not by decoration.
 
+Choose one `style_archetype` and apply its navigation, evidence-container, density, and branding rules consistently. Do not mix archetypes slide by slide.
+
 Examples:
 
 - thesis defense -> science cover, central thesis, research method, visual evidence, editable charts, findings, risks, closing;
@@ -116,6 +119,7 @@ Treat purchased or user-provided templates as private inputs. Reuse them locally
 - If transitions or animation cannot survive the editing library, use native PowerPoint automation or choose a static layout; do not silently flatten a dynamic deck.
 - Keep headers, footers, page numbers, citations, margins, strokes, and corner radii consistent.
 - Use one primary layout system. Avoid isolated slides that look imported from another deck.
+- Do not confuse clean with empty. Normal body slides should feel complete at first glance, while every visible element must still explain, prove, compare, or guide.
 - Keep titles at least 24 pt, body text at least 16 pt, and citations at least 9 pt unless the presentation tooling specifies stricter values.
 
 When the environment provides `@oai/artifact-tool`, use it for programmatic slide creation and editing. The original resource kit can be regenerated with:
