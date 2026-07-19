@@ -1,0 +1,48 @@
+{
+  "version": 1,
+  "resource": {
+    "file": "../assets/premium-green-layout-kit.pptx",
+    "aspect_ratio": "16:9",
+    "slides": 20,
+    "palette": ["#0B3B2A", "#1D6B43", "#AFC3B2", "#F7F3EA", "#D89A2B"],
+    "fonts": ["Microsoft YaHei", "Georgia"]
+  },
+  "selection_rules": [
+    "Choose the layout from the message type, not from how decorative it looks.",
+    "Use one conclusion per slide and place that conclusion in the title.",
+    "Never shrink body text to rescue an overloaded layout; split the slide instead.",
+    "Use a cover once, a divider only at a real chapter boundary, and a closing once.",
+    "Keep no more than two dark-green slides in succession unless the section is intentionally dramatic."
+  ],
+  "layouts": [
+    {"slide": 1, "id": "cover-nature", "role": "cover", "best_for": ["work report", "project proposal", "education", "sustainability"], "slots": "title <= 16 Chinese chars; subtitle <= 24 chars", "replace": ["title", "subtitle", "hero image"]},
+    {"slide": 2, "id": "cover-science", "role": "cover", "best_for": ["thesis defense", "scientific talk", "technical sharing"], "slots": "title <= 16 Chinese chars; subtitle <= 24 chars", "replace": ["title", "subtitle", "hero image"]},
+    {"slide": 3, "id": "cover-strategy", "role": "cover", "best_for": ["strategy", "annual plan", "business proposal", "retrospective"], "slots": "title <= 12 Chinese chars; subtitle <= 24 chars", "replace": ["title", "subtitle", "hero image"]},
+    {"slide": 4, "id": "section-divider", "role": "section", "best_for": ["new chapter", "major narrative turn"], "slots": "chapter number; title <= 14 Chinese chars; descriptor <= 28 chars", "replace": ["number", "title", "descriptor"]},
+    {"slide": 5, "id": "agenda-four", "role": "agenda", "best_for": ["four-part story", "chapter map"], "slots": "four labels <= 4 Chinese chars each; four explanations <= 12 chars each", "replace": ["thesis", "chapter labels", "chapter explanations"]},
+    {"slide": 6, "id": "opening-thesis", "role": "thesis", "best_for": ["central claim", "executive summary", "opening promise"], "slots": "claim <= 32 Chinese chars; three principles <= 8 chars each", "replace": ["claim", "three principles"]},
+    {"slide": 7, "id": "visual-evidence", "role": "image-and-claim", "best_for": ["one image with three supporting points", "product", "case", "experiment"], "slots": "title <= 24 chars; three points with one sentence each", "replace": ["title", "image", "three evidence points"]},
+    {"slide": 8, "id": "gallery-three", "role": "gallery", "best_for": ["three stages", "three views", "portfolio", "experiment process"], "slots": "three images; label <= 4 chars; caption <= 12 chars", "replace": ["title", "three images", "labels", "captions"]},
+    {"slide": 9, "id": "evidence-three", "role": "three-evidence", "best_for": ["three metrics", "three findings", "three reasons"], "slots": "three lead numbers or keywords; one-sentence explanation each", "replace": ["title", "three signals", "three explanations"]},
+    {"slide": 10, "id": "process-four", "role": "process", "best_for": ["method", "workflow", "implementation plan"], "slots": "four steps; label <= 4 chars; caption <= 10 chars", "replace": ["title", "four steps"]},
+    {"slide": 11, "id": "timeline-five", "role": "timeline", "best_for": ["history", "roadmap", "milestones"], "slots": "five dates; milestone <= 6 chars; meaning <= 12 chars", "replace": ["title", "dates", "milestones", "meanings"]},
+    {"slide": 12, "id": "comparison-before-after", "role": "comparison", "best_for": ["before and after", "old and new", "option A and B"], "slots": "two sides with up to three short lines each", "replace": ["title", "left label and points", "right label and points"]},
+    {"slide": 13, "id": "chart-bar", "role": "bar-chart", "best_for": ["ranking", "category comparison", "time or cost reduction"], "slots": "one KPI; 3-6 categories; source note", "replace": ["title", "KPI", "editable chart data", "source"]},
+    {"slide": 14, "id": "chart-line", "role": "line-chart", "best_for": ["trend", "progress", "change over time"], "slots": "5-8 time points; one key change card; source note", "replace": ["title", "editable chart data", "change card", "source"]},
+    {"slide": 15, "id": "chart-doughnut", "role": "composition-chart", "best_for": ["composition", "budget", "time allocation"], "slots": "3-5 parts summing to 100%; source note", "replace": ["title", "editable chart data", "legend", "source"]},
+    {"slide": 16, "id": "research-method", "role": "method", "best_for": ["research design", "audit trail", "validated process"], "slots": "four stages; two short lines each", "replace": ["title", "four method stages"]},
+    {"slide": 17, "id": "findings-matrix", "role": "priority-matrix", "best_for": ["priority", "portfolio", "value-feasibility"], "slots": "2x2 axes; 3-6 bubbles; one recommended quadrant", "replace": ["title", "axis labels", "bubbles", "recommendation"]},
+    {"slide": 18, "id": "risk-matrix", "role": "risk", "best_for": ["risk and response", "issue triage"], "slots": "3x3 matrix; up to three labeled risks; response for each", "replace": ["title", "risk positions", "risk names", "responses"]},
+    {"slide": 19, "id": "quote-case", "role": "quote", "best_for": ["user insight", "case statement", "principle"], "slots": "quote <= 34 Chinese chars; attribution; three proof numbers", "replace": ["quote", "attribution", "three proof numbers"]},
+    {"slide": 20, "id": "closing-action", "role": "closing", "best_for": ["summary", "next action", "handoff"], "slots": "closing claim <= 22 Chinese chars; three next steps", "replace": ["closing claim", "descriptor", "three next steps"]}
+  ],
+  "scenario_recipes": {
+    "thesis_defense": [2, 6, 4, 16, 7, 13, 14, 17, 18, 20],
+    "work_report": [1, 6, 5, 9, 10, 11, 13, 14, 20],
+    "project_proposal": [3, 6, 4, 7, 9, 10, 12, 13, 18, 20],
+    "training_or_science_short_8min": [2, 6, 7, 16, 9, 17, 18, 20],
+    "training_or_science": [2, 5, 7, 8, 10, 11, 16, 17, 19, 20],
+    "executive_brief": [3, 6, 9, 12, 13, 18, 20]
+  }
+}
+
