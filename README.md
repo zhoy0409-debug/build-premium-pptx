@@ -1,75 +1,103 @@
+<div align="center">
+
 # PPT Auto Studio
 
-一个为 PPT 小白设计的 Codex Skill：把 Word、PDF、Excel、图片、实验结果、会议笔记或旧 PPT 直接交给它，由系统完成内容梳理、故事线、版式匹配、视觉补充、逐页渲染和质量检查，交付可编辑的 `.pptx`。
+**把材料交进来，把可编辑的高级 PPT 拿走。**  
+**Drop in your content. Get a polished, editable presentation.**
 
-用户不需要会选模板、配色、字体、排版或图表。
+`Beginner-first` · `Editable PPTX` · `Automatic storytelling` · `Render QA`
 
-## 它解决什么问题
+</div>
 
-- **不会组织**：先识别受众、目标和证据，再生成结论驱动的故事线。
-- **不会设计**：自动从内置版式与场景配方中选择，不把模板库丢给用户筛选。
-- **不会动手**：替换文字、图片和图表，生成可编辑成品。
-- **怕翻车**：渲染每一页，检查溢出、遮挡、字体、裁切和整体节奏后再交付。
+![Three premium cover styles](./assets/showcase-covers.png)
 
-## 内置资源
+## 不会设计，也能做好 PPT / Great slides without design skills
 
-- 20 页原创 16:9 黄绿高级感版式；
-- 3 个可替换的原创封面视觉；
-- 工作汇报、答辩、项目提案、教学/科研分享、管理层简报等场景配方；
-- 模板库批量目录工具，可检索页数、比例、图片、图表、动画、字体和主题色；
-- 可复现资源包的 `@oai/artifact-tool` 构建脚本；
-- 逐页设计与 QA 规则。
+这不是“再给你一堆模板，让你自己慢慢挑”。把 Word、PDF、Excel、图片、实验结果、会议笔记或旧 PPT 交给 Skill，它会自动完成内容筛选、故事线、版式匹配、视觉补充、逐页渲染和质量检查。
 
-内置 PPT 位于 [`assets/premium-green-layout-kit.pptx`](assets/premium-green-layout-kit.pptx)，文字、原生图表和简单图形均可编辑。
+This is not another template dump. Give the Skill a document, spreadsheet, research result, image set, meeting note, or old deck. It organizes the story, selects layouts, adds useful visuals, builds editable slides, and checks every rendered page.
 
-## 安装
+| 你只需要 / You provide | Skill 自动完成 / The Skill handles |
+|---|---|
+| 原始材料 / Raw content | 提炼重点、区分正文与附录 / Content triage |
+| 听众和时长（知道就说）/ Audience and duration, if known | 故事线、页数与演讲节奏 / Story, slide count, pacing |
+| 必须保留的数据和引用 / Required facts and sources | 版式、配色、字体、配图与图表 / Layouts, colors, typography, visuals, charts |
+| 一句“我不会，你直接决定” / “I am new—choose for me” | 一个推荐方向，不让用户做专业选择 / One recommended direction |
 
-将仓库克隆或复制到 Codex skills 目录：
+## 真实版式效果 / Real layout previews
+
+下面全部来自仓库内的可编辑 PPTX 实际渲染结果，不是概念图。
+
+Every preview below is rendered from the editable PPTX included in this repository—not a mockup.
+
+![Editable presentation layout gallery](./assets/showcase-layouts.png)
+
+**[下载 20 页可编辑资源包 / Download the editable 20-slide kit](./assets/premium-green-layout-kit.pptx)**
+
+## 内置能力 / What is included
+
+- 20 页原创 16:9 黄绿视觉系统：封面、章节、目录、图文、流程、时间线、对比、研究方法、矩阵、结尾等；  
+  20 original 16:9 layouts covering covers, sections, agenda, visual evidence, process, timeline, comparison, research, matrices, and closing.
+- 3 类原生可编辑图表：柱状图、折线图、环形图；  
+  Editable native bar, line, and doughnut charts.
+- 工作汇报、答辩、项目提案、科研分享和管理层简报的自动选页配方；  
+  Automatic recipes for reports, thesis defenses, proposals, scientific talks, and executive briefs.
+- 本地模板库目录工具，可批量检索页数、比例、图片、图表、动画、字体和主题色；  
+  A local template cataloger that indexes slide count, aspect ratio, media, charts, animation, fonts, and theme colors.
+- 全套逐页渲染、溢出、遮挡、字体和裁切检查；  
+  Full-deck render checks for overflow, overlap, fonts, and image crops.
+
+## 30 秒上手 / 30-second quick start
+
+```text
+用 $build-premium-pptx 把这个 Word 和 Excel 做成 10 页工作汇报。
+我不会做 PPT，你直接决定结构、版式和配图。
+```
+
+```text
+Use $build-premium-pptx to turn these notes into an 8-minute research talk.
+I am new to PowerPoint, so choose the story, layouts, and visuals for me.
+```
+
+Skill 最多只在确实影响结果时询问听众和演讲时长。其余设计决策默认自动完成。
+
+The Skill asks only for audience or duration when they materially affect the deck. Everything else defaults to autopilot.
+
+## 安装 / Installation
 
 ```bash
 git clone https://github.com/zhoy0409-debug/build-premium-pptx.git
 cp -R build-premium-pptx ~/.codex/skills/build-premium-pptx
 ```
 
-Windows PowerShell：
+Windows PowerShell:
 
 ```powershell
 git clone https://github.com/zhoy0409-debug/build-premium-pptx.git
 Copy-Item -Recurse .\build-premium-pptx "$env:USERPROFILE\.codex\skills\build-premium-pptx"
 ```
 
-重启 Codex 后调用 `$build-premium-pptx`。
+重启 Codex 后调用 `$build-premium-pptx`。  
+Restart Codex, then invoke `$build-premium-pptx`.
 
-## 最简单的用法
+## 私有模板库 / Private template libraries
 
-```text
-用 $build-premium-pptx 把这个 Word 和 Excel 做成 10 页工作汇报。我不会做 PPT，你直接决定结构、版式和配图。
-```
+Skill 可以在本地检索和调用用户有权使用的模板，但不会把购买的原始模板、内嵌素材或字体上传到公共仓库。仓库中的 PPTX、版式和展示图均为重新设计的原创资源。
 
-```text
-用 $build-premium-pptx 把这些实验结果做成 8 分钟答辩，听众是老师，结论和证据要一眼看懂。
-```
+The Skill can privately search templates the user is authorized to use. Purchased source decks, embedded stock assets, and fonts are not redistributed. The public PPTX, layouts, and previews in this repository are original rebuilt resources.
 
-```text
-Use $build-premium-pptx to turn these notes into a polished editable deck. Choose the story, layouts, and visuals for me.
-```
-
-## 对私有模板库的处理
-
-Skill 可以在本地扫描和调用用户有权使用的模板库，但不会把购买的原始模板、内嵌素材或字体重新上传到公共仓库。公共资源包是根据版式原则重新设计的原创资源；私有模板仅作为本地输入使用。
-
-## 目录
+## 文件结构 / Repository map
 
 ```text
-SKILL.md                          核心工作流
-agents/openai.yaml                Codex 展示与默认提示词
-assets/                           原创 PPTX 与封面视觉
-references/layout-recipes.json    版式与场景自动选择规则
-references/design-and-qa.md       设计、数据与逐页质检规则
-scripts/catalog_pptx.py           本地模板库目录工具
-scripts/build_premium_resource_kit.mjs  原创资源包构建脚本
+SKILL.md                              Core autopilot workflow
+agents/openai.yaml                    Codex UI metadata
+assets/premium-green-layout-kit.pptx  Editable presentation resource kit
+assets/showcase-*.png                 Rendered README previews
+references/layout-recipes.json        Layout and scenario selection rules
+references/design-and-qa.md           Design, data, and QA rules
+scripts/catalog_pptx.py               Local template cataloger
+scripts/build_premium_resource_kit.mjs Reproducible resource-kit builder
 ```
 
-## 设计原则
-
-一页一个结论；证据优先于装饰；少问用户专业问题；提供一个推荐方向；保留可编辑性；不虚构数据；没有逐页渲染检查就不算完成。
+> 一页一个结论；证据优先于装饰；保留可编辑性；不虚构数据；没有逐页渲染检查就不算完成。  
+> One takeaway per slide. Evidence before decoration. Stay editable. Never invent data. No delivery without full-deck render QA.
