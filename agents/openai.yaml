@@ -1,5 +1,5 @@
 interface:
-  display_name: "Premium PPT Studio"
-  short_description: "Turn rough content into polished presentations"
-  default_prompt: "Use $build-premium-pptx to turn my rough content into a polished presentation; I am new to PowerPoint, so choose the structure, visuals, and best local template for me."
+  display_name: "PPT Auto Studio"
+  short_description: "Drop in materials and receive a polished editable deck"
+  default_prompt: "Use $build-premium-pptx to turn my materials into a polished editable presentation. I am not good at design or organizing slides, so infer the story, choose the layouts and visuals, render every slide, fix issues, and give me one recommended result."
 
