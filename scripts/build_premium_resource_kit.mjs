@@ -483,4 +483,3 @@ await fs.mkdir(path.dirname(outFile), { recursive: true });
 await pptx.save(outFile);
 await fs.rm(`${outFile}.inspect.ndjson`, { force: true });
 console.log(JSON.stringify({ outFile, previewFile, slides: p.slides.items.length }));
-

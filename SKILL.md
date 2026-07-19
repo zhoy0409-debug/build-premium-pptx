@@ -174,4 +174,3 @@ Beginner examples:
 Turn these notes into an investor deck. Choose the story, visuals, and layout for me.
 美化这个旧 PPT，但数字、引用和图表含义都不能变。
 ```
-

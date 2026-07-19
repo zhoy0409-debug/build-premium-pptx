@@ -2,4 +2,3 @@ interface:
   display_name: "PPT Auto Studio"
   short_description: "Drop in materials and receive a polished editable deck"
   default_prompt: "Use $build-premium-pptx to turn my materials into a polished editable presentation. I am not good at design or organizing slides, so infer the story, choose the layouts and visuals, render every slide, fix issues, and give me one recommended result."
-

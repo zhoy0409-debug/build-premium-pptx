@@ -63,4 +63,3 @@ Inspect every full-size slide for:
 - charts whose numbers, labels, or source notes disagree with the supplied data.
 
 Finally open the `.pptx` in a compatible presentation application when available. Confirm slide size, theme, media, transitions, videos, and fonts survive the round trip. Re-render after every material revision.
-
