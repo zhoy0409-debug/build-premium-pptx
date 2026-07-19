@@ -1,0 +1,5 @@
+interface:
+  display_name: "Premium PPT Studio"
+  short_description: "Turn rough content into polished presentations"
+  default_prompt: "Use $build-premium-pptx to turn my rough content into a polished presentation; I am new to PowerPoint, so choose the structure, visuals, and best local template for me."
+
