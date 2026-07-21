@@ -19,7 +19,8 @@ Before storyboarding, read:
 
 - [references/layout-recipes.json](references/layout-recipes.json) for deterministic layout and scenario selection;
 - [references/aesthetic-patterns.md](references/aesthetic-patterns.md) for research, consulting, institutional, and scientific visual grammars;
-- [references/design-and-qa.md](references/design-and-qa.md) for design, data-integrity, and render checks.
+- [references/design-and-qa.md](references/design-and-qa.md) for design, data-integrity, and render checks;
+- [references/local-library.json](references/local-library.json), when it exists, for the user's own template library resolved into scenario packs. See [section 4](#4-prefer-a-configured-local-library); prefer it over the built-in kits when it covers the scenario.
 
 The built-in system contains four original, editable 16:9 theme kits. Each has the same 20 medium-to-high-density layouts, native charts, and replaceable hero images.
 
@@ -30,7 +31,9 @@ The built-in system contains four original, editable 16:9 theme kits. Each has t
 | Institutional red | [assets/premium-red-layout-kit.pptx](assets/premium-red-layout-kit.pptx) | universities, public institutions, formal reviews |
 | Consulting purple | [assets/premium-purple-layout-kit.pptx](assets/premium-purple-layout-kit.pptx) | strategy, analytics, business and executive briefs |
 
-Use exactly one theme per deck. If the user supplies brand colors, follow them; otherwise infer the theme from the audience and scenario and give one recommended result. Do not ask a beginner to compare palettes. A private local template library is optional, not a prerequisite.
+Use exactly one theme per deck. If the user supplies brand colors, follow them; otherwise infer the theme from the audience and scenario and give one recommended result. Do not ask a beginner to compare palettes.
+
+A private local template library is optional. When one is configured it becomes the preferred source of layouts, because purchased layout banks carry more layouts and native charts than these kits; the built-in kits then cover whatever the library cannot express.
 
 ## Beginner contract
 
@@ -107,21 +110,71 @@ Respect every layout's `slots` limit. Replace sample copy, data, labels, and ima
 
 For a long technical lecture, `research_operating_system` may use a consistent dark canvas across the full deck; add sparse chapter dividers and verify projector contrast. For a paper review, use `figure_first_paper_review` and repeat the question → evidence → direct finding → next question loop. Do not force either archetype onto a short general-audience talk.
 
-## 4. Use a private template library only when it adds value
+## 4. Prefer a configured local library
 
-Use the local-library route when the user explicitly supplies brand templates, requests a house style, or the built-in kit lacks a necessary layout.
+If [references/local-library.json](references/local-library.json) exists, a local template library is configured and it outranks the built-in kits. Purchased layout banks carry far more layouts and native charts than the 20-slide built-in kits, so use them when they cover the scenario, and fall back to the built-in kits when they do not.
 
-Catalog first instead of opening hundreds of files:
+Never show the user a file list. Filenames in these libraries describe topics, not message types, so they cannot support a choice. Resolve everything through scenario packs instead.
+
+### Read the pack, not the folder
+
+`local-library.json` maps a plain-language scenario to a concrete deck, colorway, and ordered slide list:
+
+```text
+年终述职 -> family work-report-cn-300, colorway blue-white, theme academic-blue
+           cover 7 | agenda 11 | body 19 | bar-chart 156 | timeline 122
+           line-chart 161 | comparison 88 | risk 25 | closing 17
+```
+
+Each step records `role`, `slide`, `matched_as`, `reused_layout`, `density`, and `charts`. Follow the pack's slide order, then adjust to the actual evidence: drop steps the material does not support, and duplicate a chart step when there is genuinely more than one chart to show.
+
+Treat these fields as warnings:
+
+- `matched_as` different from `role` means the layout is an approximation; verify it still carries the intended message.
+- `reused_layout: true` means the same source slide already appears earlier in the pack; vary the content and confirm the deck does not look repetitive.
+- `unmatched_roles` lists parts of the story the library cannot express; take those slides from the built-in kit.
+
+Pick the colorway from audience and scenario exactly as with built-in themes, and keep one colorway per deck. Do not ask a beginner to compare colorways.
+
+### One-time setup, and refresh when the library changes
+
+```bash
+python scripts/index_slides.py "/path/to/templates" --output work/slide-index.json
+python scripts/build_scenario_packs.py work/slide-index.json --output references/local-library.json
+```
+
+`index_slides.py` records role, density, title, chart kinds, and structure for every usable slide, and drops vendor instruction pages such as font-install and recolor tutorials. `build_scenario_packs.py` collapses that index into the scenario packs above. Use `--exclude` to keep personal or third-party material out of the index; never index folders holding other people's names or records. Both scripts support `--self-test`; run it after changing either one.
+
+Use `scripts/catalog_pptx.py` for deck-level questions the packs do not answer, such as auditing aspect ratios or locating a deck by theme font:
 
 ```bash
 python scripts/catalog_pptx.py "/path/to/templates" --query academic --query green --output work/catalog.json
 ```
 
-`--query` values are repeatable OR filters. The catalog reports slide count, aspect ratio, media, charts, diagrams, layouts, transitions, animation timing, theme fonts, and theme colors. Cache a full catalog until the library changes. Run `python scripts/catalog_pptx.py --self-test` after changing the script.
+`--query` values are repeatable OR filters. Cache a full catalog until the library changes.
 
-Shortlist at most three decks internally, render them, and make the final selection yourself. Use one primary deck and at most one donor deck. Prefer a structurally correct layout over a more decorative but semantically wrong one.
+### Recolour only on request
 
-Treat purchased or user-provided templates as private inputs. Reuse them locally when authorized, but never publish or redistribute the originals, embedded stock, or fonts unless redistribution rights are explicit. Public deliverables may contain original layouts and generated or separately licensed assets derived from design principles, not copied slides.
+[references/palette-library.json](references/palette-library.json), when present, holds palettes read from the library's colour cards, each with a `dominant`, an `accent`, and `legible_pairs` scored for contrast. Use it when the user asks for a specific mood — 复古, 渐变, 高级感 — rather than as a default; the deck's own colorway is already coherent, and recolouring a purchased master is easy to get wrong.
+
+Take the text and background from a pair in `legible_pairs`, never from two arbitrary swatches. A pair with `ok_small_text: false` clears the large-text bar only: use it for titles and KPI numbers, and keep citations, source notes, and axis labels on a pair that passes.
+
+### Clean every borrowed slide
+
+Purchased masters carry the vendor's marketing, not the user's. Before delivering, confirm each of these on every reused slide:
+
+- **Vendor branding is gone.** These decks place a logo in the master, so deleting it on one slide is not enough; remove it in the slide master and check the corner of every rendered page. Shipping a defense deck with a template seller's logo is a real failure.
+- **Sample copy is gone.** Filler such as `You can write your subtitle here` and `这边可以写上你的副标题` repeats across many layouts and survives casual editing.
+- **Required fonts are installed**, or the layout silently reflows. Report missing fonts to the user instead of substituting quietly; the font files usually ship inside the library's own `字体` folder.
+- **Real content still fits.** Sample text is length-tuned to the design, so genuine titles and labels often overflow. Re-render and check, and split the slide rather than shrinking type.
+
+### When no pack fits
+
+Shortlist at most three decks from the slide index, render only those slides, and make the final selection yourself. Use one primary deck and at most one donor deck. Prefer a structurally correct layout over a more decorative but semantically wrong one.
+
+### Licensing
+
+Treat purchased or user-provided templates as private inputs. `local-library.json` holds metadata only — roles, slide numbers, and relative paths — and carries no slide content, so it is safe to commit. The masters themselves stay on the user's disk: never publish or redistribute the originals, embedded stock, or fonts unless redistribution rights are explicit. Public deliverables may contain original layouts and generated or separately licensed assets derived from design principles, not copied slides.
 
 ## 5. Build an editable deck
 

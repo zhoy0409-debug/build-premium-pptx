@@ -1,0 +1,818 @@
+{
+  "version": 1,
+  "families": {
+    "work-report-cn-100": {
+      "label": "中文标准工作汇报",
+      "language": "zh",
+      "colorways": {
+        "orange-blue": {
+          "relpath": "有脑子皮皮踢\\原创工作汇报PPT模版\\中文100页\\中文100页工作汇报PPT（橙蓝配色）by有脑子皮皮踢.pptx",
+          "usable_slides": 107,
+          "theme": "green-gold"
+        },
+        "red-blue": {
+          "relpath": "有脑子皮皮踢\\原创工作汇报PPT模版\\中文100页\\中文100页工作汇报PPT（红蓝配色）by有脑子皮皮踢.pptx",
+          "usable_slides": 107,
+          "theme": "institutional-red"
+        },
+        "blue-white": {
+          "relpath": "有脑子皮皮踢\\原创工作汇报PPT模版\\中文100页\\中文100页工作汇报PPT（蓝白配色）by有脑子皮皮踢.pptx",
+          "usable_slides": 107,
+          "theme": "academic-blue"
+        },
+        "yellow-green": {
+          "relpath": "有脑子皮皮踢\\原创工作汇报PPT模版\\中文100页\\中文100页工作汇报PPT（黄绿配色）by有脑子皮皮踢.pptx",
+          "usable_slides": 107,
+          "theme": "green-gold"
+        }
+      }
+    },
+    "work-report-cn-300": {
+      "label": "中文长篇工作汇报",
+      "language": "zh",
+      "colorways": {
+        "orange-blue": {
+          "relpath": "有脑子皮皮踢\\原创工作汇报PPT模版\\中文300页（持续更新）\\(持续更新中）中文300页工作汇报PPT（橙蓝配色）by有脑子皮皮踢.pptx",
+          "usable_slides": 174,
+          "theme": "green-gold"
+        },
+        "red-blue": {
+          "relpath": "有脑子皮皮踢\\原创工作汇报PPT模版\\中文300页（持续更新）\\(持续更新中）中文300页工作汇报PPT（红蓝配色）by有脑子皮皮踢.pptx",
+          "usable_slides": 172,
+          "theme": "institutional-red"
+        },
+        "blue-white": {
+          "relpath": "有脑子皮皮踢\\原创工作汇报PPT模版\\中文300页（持续更新）\\(持续更新中）中文300页工作汇报PPT（蓝白配色）by有脑子皮皮踢.pptx",
+          "usable_slides": 168,
+          "theme": "academic-blue"
+        },
+        "yellow-green": {
+          "relpath": "有脑子皮皮踢\\原创工作汇报PPT模版\\中文300页（持续更新）\\（持续更新中）中文300页工作汇报PPT（黄绿配色）by有脑子皮皮踢.pptx",
+          "usable_slides": 169,
+          "theme": "green-gold"
+        }
+      }
+    },
+    "work-report-en-150": {
+      "label": "English standard report",
+      "language": "en",
+      "colorways": {
+        "orange-blue": {
+          "relpath": "有脑子皮皮踢\\原创工作汇报PPT模版\\英文150页\\英文150页工作汇报PPT（橙蓝配色）by有脑子皮皮踢.pptx",
+          "usable_slides": 64,
+          "theme": "green-gold"
+        },
+        "red-blue": {
+          "relpath": "有脑子皮皮踢\\原创工作汇报PPT模版\\英文150页\\英文150页工作汇报PPT（红蓝配色）by有脑子皮皮踢.pptx",
+          "usable_slides": 168,
+          "theme": "institutional-red"
+        },
+        "blue-white": {
+          "relpath": "有脑子皮皮踢\\原创工作汇报PPT模版\\英文150页\\英文150页工作汇报PPT（蓝白配色）by有脑子皮皮踢.pptx",
+          "usable_slides": 162,
+          "theme": "academic-blue"
+        },
+        "yellow-green": {
+          "relpath": "有脑子皮皮踢\\原创工作汇报PPT模版\\英文150页\\英文150页工作汇报PPT（黄绿配色）by有脑子皮皮踢.pptx",
+          "usable_slides": 83,
+          "theme": "green-gold"
+        }
+      }
+    },
+    "work-report-en-300": {
+      "label": "English long-form report",
+      "language": "en",
+      "colorways": {
+        "orange-blue": {
+          "relpath": "有脑子皮皮踢\\原创工作汇报PPT模版\\英文300页（持续更新）\\(持续更新中）英文300页工作汇报PPT（橙蓝配色）by有脑子皮皮踢.pptx",
+          "usable_slides": 198,
+          "theme": "green-gold"
+        },
+        "red-blue": {
+          "relpath": "有脑子皮皮踢\\原创工作汇报PPT模版\\英文300页（持续更新）\\(持续更新中）英文300页工作汇报PPT（红蓝配色）by有脑子皮皮踢.pptx",
+          "usable_slides": 198,
+          "theme": "institutional-red"
+        },
+        "blue-white": {
+          "relpath": "有脑子皮皮踢\\原创工作汇报PPT模版\\英文300页（持续更新）\\(持续更新中）英文300页工作汇报PPT（蓝白配色）by有脑子皮皮踢.pptx",
+          "usable_slides": 196,
+          "theme": "academic-blue"
+        },
+        "yellow-green": {
+          "relpath": "有脑子皮皮踢\\原创工作汇报PPT模版\\英文300页（持续更新）\\(持续更新中）英文300页工作汇报PPT（黄绿配色）by有脑子皮皮踢.pptx",
+          "usable_slides": 198,
+          "theme": "green-gold"
+        }
+      }
+    }
+  },
+  "packs": {
+    "年终述职": {
+      "en": "year_end_review",
+      "recommended_length": "12-18 slides",
+      "family": "work-report-cn-300",
+      "default_colorway": "blue-white",
+      "theme": "academic-blue",
+      "steps": [
+        {
+          "role": "cover",
+          "slide": 7,
+          "matched_as": "cover",
+          "reused_layout": false,
+          "density": "light",
+          "title_sample": "有脑子皮皮踢",
+          "charts": []
+        },
+        {
+          "role": "agenda",
+          "slide": 11,
+          "matched_as": "agenda",
+          "reused_layout": false,
+          "density": "light",
+          "title_sample": "目录页",
+          "charts": []
+        },
+        {
+          "role": "body",
+          "slide": 19,
+          "matched_as": "body",
+          "reused_layout": false,
+          "density": "medium",
+          "title_sample": "黄金圈思维模型",
+          "charts": []
+        },
+        {
+          "role": "bar-chart",
+          "slide": 156,
+          "matched_as": "bar-chart",
+          "reused_layout": false,
+          "density": "medium",
+          "title_sample": ".5%",
+          "charts": [
+            "barChart"
+          ]
+        },
+        {
+          "role": "timeline",
+          "slide": 122,
+          "matched_as": "timeline",
+          "reused_layout": false,
+          "density": "medium",
+          "title_sample": "项目时间表",
+          "charts": []
+        },
+        {
+          "role": "line-chart",
+          "slide": 161,
+          "matched_as": "line-chart",
+          "reused_layout": false,
+          "density": "medium",
+          "title_sample": "项目成果和销售额",
+          "charts": [
+            "areaChart"
+          ]
+        },
+        {
+          "role": "comparison",
+          "slide": 88,
+          "matched_as": "comparison",
+          "reused_layout": false,
+          "density": "medium",
+          "title_sample": "明年项目计划概况",
+          "charts": []
+        },
+        {
+          "role": "risk",
+          "slide": 25,
+          "matched_as": "risk",
+          "reused_layout": false,
+          "density": "medium",
+          "title_sample": "财务状况分析",
+          "charts": []
+        },
+        {
+          "role": "closing",
+          "slide": 17,
+          "matched_as": "closing",
+          "reused_layout": false,
+          "density": "sparse",
+          "title_sample": "",
+          "charts": []
+        }
+      ],
+      "unmatched_roles": []
+    },
+    "季度工作汇报": {
+      "en": "quarterly_report",
+      "recommended_length": "10-14 slides",
+      "family": "work-report-cn-100",
+      "default_colorway": "blue-white",
+      "theme": "academic-blue",
+      "steps": [
+        {
+          "role": "cover",
+          "slide": 7,
+          "matched_as": "cover",
+          "reused_layout": false,
+          "density": "light",
+          "title_sample": "有脑子皮皮踢",
+          "charts": []
+        },
+        {
+          "role": "agenda",
+          "slide": 10,
+          "matched_as": "agenda",
+          "reused_layout": false,
+          "density": "light",
+          "title_sample": "目录页",
+          "charts": []
+        },
+        {
+          "role": "body",
+          "slide": 24,
+          "matched_as": "body",
+          "reused_layout": false,
+          "density": "medium",
+          "title_sample": "年度工作进度概括",
+          "charts": []
+        },
+        {
+          "role": "bar-chart",
+          "slide": 93,
+          "matched_as": "bar-chart",
+          "reused_layout": false,
+          "density": "medium",
+          "title_sample": ".5%",
+          "charts": [
+            "barChart"
+          ]
+        },
+        {
+          "role": "process",
+          "slide": 20,
+          "matched_as": "process",
+          "reused_layout": false,
+          "density": "medium",
+          "title_sample": "产品",
+          "charts": []
+        },
+        {
+          "role": "line-chart",
+          "slide": 98,
+          "matched_as": "line-chart",
+          "reused_layout": false,
+          "density": "medium",
+          "title_sample": "项目成果和销售额",
+          "charts": [
+            "areaChart"
+          ]
+        },
+        {
+          "role": "closing",
+          "slide": 16,
+          "matched_as": "closing",
+          "reused_layout": false,
+          "density": "sparse",
+          "title_sample": "",
+          "charts": []
+        }
+      ],
+      "unmatched_roles": []
+    },
+    "项目提案": {
+      "en": "project_proposal",
+      "recommended_length": "12-16 slides",
+      "family": "work-report-cn-300",
+      "default_colorway": "blue-white",
+      "theme": "academic-blue",
+      "steps": [
+        {
+          "role": "cover",
+          "slide": 7,
+          "matched_as": "cover",
+          "reused_layout": false,
+          "density": "light",
+          "title_sample": "有脑子皮皮踢",
+          "charts": []
+        },
+        {
+          "role": "body",
+          "slide": 19,
+          "matched_as": "body",
+          "reused_layout": false,
+          "density": "medium",
+          "title_sample": "黄金圈思维模型",
+          "charts": []
+        },
+        {
+          "role": "risk",
+          "slide": 25,
+          "matched_as": "risk",
+          "reused_layout": false,
+          "density": "medium",
+          "title_sample": "财务状况分析",
+          "charts": []
+        },
+        {
+          "role": "process",
+          "slide": 83,
+          "matched_as": "process",
+          "reused_layout": false,
+          "density": "medium",
+          "title_sample": "产品",
+          "charts": []
+        },
+        {
+          "role": "comparison",
+          "slide": 88,
+          "matched_as": "comparison",
+          "reused_layout": false,
+          "density": "medium",
+          "title_sample": "明年项目计划概况",
+          "charts": []
+        },
+        {
+          "role": "bar-chart",
+          "slide": 156,
+          "matched_as": "bar-chart",
+          "reused_layout": false,
+          "density": "medium",
+          "title_sample": ".5%",
+          "charts": [
+            "barChart"
+          ]
+        },
+        {
+          "role": "timeline",
+          "slide": 122,
+          "matched_as": "timeline",
+          "reused_layout": false,
+          "density": "medium",
+          "title_sample": "项目时间表",
+          "charts": []
+        },
+        {
+          "role": "closing",
+          "slide": 17,
+          "matched_as": "closing",
+          "reused_layout": false,
+          "density": "sparse",
+          "title_sample": "",
+          "charts": []
+        }
+      ],
+      "unmatched_roles": [
+        "section"
+      ]
+    },
+    "毕业答辩": {
+      "en": "thesis_defense",
+      "recommended_length": "10-15 slides",
+      "family": "work-report-cn-100",
+      "default_colorway": "blue-white",
+      "theme": "academic-blue",
+      "steps": [
+        {
+          "role": "cover",
+          "slide": 7,
+          "matched_as": "cover",
+          "reused_layout": false,
+          "density": "light",
+          "title_sample": "有脑子皮皮踢",
+          "charts": []
+        },
+        {
+          "role": "agenda",
+          "slide": 10,
+          "matched_as": "agenda",
+          "reused_layout": false,
+          "density": "light",
+          "title_sample": "目录页",
+          "charts": []
+        },
+        {
+          "role": "method",
+          "slide": 47,
+          "matched_as": "method",
+          "reused_layout": false,
+          "density": "medium",
+          "title_sample": "设定愿景、使命和目标  驱动对市场的分析",
+          "charts": []
+        },
+        {
+          "role": "diagram",
+          "slide": 57,
+          "matched_as": "diagram",
+          "reused_layout": false,
+          "density": "medium",
+          "title_sample": "病例介绍",
+          "charts": []
+        },
+        {
+          "role": "bar-chart",
+          "slide": 93,
+          "matched_as": "bar-chart",
+          "reused_layout": false,
+          "density": "medium",
+          "title_sample": ".5%",
+          "charts": [
+            "barChart"
+          ]
+        },
+        {
+          "role": "line-chart",
+          "slide": 98,
+          "matched_as": "line-chart",
+          "reused_layout": false,
+          "density": "medium",
+          "title_sample": "项目成果和销售额",
+          "charts": [
+            "areaChart"
+          ]
+        },
+        {
+          "role": "comparison",
+          "slide": 25,
+          "matched_as": "comparison",
+          "reused_layout": false,
+          "density": "medium",
+          "title_sample": "明年项目计划概况",
+          "charts": []
+        },
+        {
+          "role": "risk",
+          "slide": 19,
+          "matched_as": "risk",
+          "reused_layout": false,
+          "density": "medium",
+          "title_sample": "销售不佳问题分析和改善",
+          "charts": []
+        },
+        {
+          "role": "closing",
+          "slide": 16,
+          "matched_as": "closing",
+          "reused_layout": false,
+          "density": "sparse",
+          "title_sample": "",
+          "charts": []
+        }
+      ],
+      "unmatched_roles": []
+    },
+    "开题/中期汇报": {
+      "en": "proposal_review",
+      "recommended_length": "10-14 slides",
+      "family": "work-report-cn-100",
+      "default_colorway": "blue-white",
+      "theme": "academic-blue",
+      "steps": [
+        {
+          "role": "cover",
+          "slide": 7,
+          "matched_as": "cover",
+          "reused_layout": false,
+          "density": "light",
+          "title_sample": "有脑子皮皮踢",
+          "charts": []
+        },
+        {
+          "role": "agenda",
+          "slide": 10,
+          "matched_as": "agenda",
+          "reused_layout": false,
+          "density": "light",
+          "title_sample": "目录页",
+          "charts": []
+        },
+        {
+          "role": "body",
+          "slide": 24,
+          "matched_as": "body",
+          "reused_layout": false,
+          "density": "medium",
+          "title_sample": "年度工作进度概括",
+          "charts": []
+        },
+        {
+          "role": "method",
+          "slide": 47,
+          "matched_as": "method",
+          "reused_layout": false,
+          "density": "medium",
+          "title_sample": "设定愿景、使命和目标  驱动对市场的分析",
+          "charts": []
+        },
+        {
+          "role": "timeline",
+          "slide": 59,
+          "matched_as": "timeline",
+          "reused_layout": false,
+          "density": "medium",
+          "title_sample": "项目时间表",
+          "charts": []
+        },
+        {
+          "role": "process",
+          "slide": 20,
+          "matched_as": "process",
+          "reused_layout": false,
+          "density": "medium",
+          "title_sample": "产品",
+          "charts": []
+        },
+        {
+          "role": "risk",
+          "slide": 19,
+          "matched_as": "risk",
+          "reused_layout": false,
+          "density": "medium",
+          "title_sample": "销售不佳问题分析和改善",
+          "charts": []
+        },
+        {
+          "role": "closing",
+          "slide": 16,
+          "matched_as": "closing",
+          "reused_layout": false,
+          "density": "sparse",
+          "title_sample": "",
+          "charts": []
+        }
+      ],
+      "unmatched_roles": []
+    },
+    "文献汇报": {
+      "en": "journal_club",
+      "recommended_length": "10-14 slides",
+      "family": "work-report-cn-100",
+      "default_colorway": "blue-white",
+      "theme": "academic-blue",
+      "steps": [
+        {
+          "role": "cover",
+          "slide": 7,
+          "matched_as": "cover",
+          "reused_layout": false,
+          "density": "light",
+          "title_sample": "有脑子皮皮踢",
+          "charts": []
+        },
+        {
+          "role": "body",
+          "slide": 24,
+          "matched_as": "body",
+          "reused_layout": false,
+          "density": "medium",
+          "title_sample": "年度工作进度概括",
+          "charts": []
+        },
+        {
+          "role": "method",
+          "slide": 47,
+          "matched_as": "method",
+          "reused_layout": false,
+          "density": "medium",
+          "title_sample": "设定愿景、使命和目标  驱动对市场的分析",
+          "charts": []
+        },
+        {
+          "role": "image-and-claim",
+          "slide": 26,
+          "matched_as": "image-and-claim",
+          "reused_layout": false,
+          "density": "medium",
+          "title_sample": "2025",
+          "charts": []
+        },
+        {
+          "role": "diagram",
+          "slide": 57,
+          "matched_as": "diagram",
+          "reused_layout": false,
+          "density": "medium",
+          "title_sample": "病例介绍",
+          "charts": []
+        },
+        {
+          "role": "line-chart",
+          "slide": 98,
+          "matched_as": "line-chart",
+          "reused_layout": false,
+          "density": "medium",
+          "title_sample": "项目成果和销售额",
+          "charts": [
+            "areaChart"
+          ]
+        },
+        {
+          "role": "body",
+          "slide": 31,
+          "matched_as": "body",
+          "reused_layout": false,
+          "density": "medium",
+          "title_sample": "2024",
+          "charts": []
+        },
+        {
+          "role": "closing",
+          "slide": 16,
+          "matched_as": "closing",
+          "reused_layout": false,
+          "density": "sparse",
+          "title_sample": "",
+          "charts": []
+        }
+      ],
+      "unmatched_roles": []
+    },
+    "学术报告": {
+      "en": "academic_talk",
+      "recommended_length": "14-20 slides",
+      "family": "work-report-cn-300",
+      "default_colorway": "blue-white",
+      "theme": "academic-blue",
+      "steps": [
+        {
+          "role": "cover",
+          "slide": 7,
+          "matched_as": "cover",
+          "reused_layout": false,
+          "density": "light",
+          "title_sample": "有脑子皮皮踢",
+          "charts": []
+        },
+        {
+          "role": "agenda",
+          "slide": 11,
+          "matched_as": "agenda",
+          "reused_layout": false,
+          "density": "light",
+          "title_sample": "目录页",
+          "charts": []
+        },
+        {
+          "role": "body",
+          "slide": 19,
+          "matched_as": "body",
+          "reused_layout": false,
+          "density": "medium",
+          "title_sample": "黄金圈思维模型",
+          "charts": []
+        },
+        {
+          "role": "method",
+          "slide": 110,
+          "matched_as": "method",
+          "reused_layout": false,
+          "density": "medium",
+          "title_sample": "设定愿景、使命和目标  驱动对市场的分析",
+          "charts": []
+        },
+        {
+          "role": "diagram",
+          "slide": 30,
+          "matched_as": "diagram",
+          "reused_layout": false,
+          "density": "medium",
+          "title_sample": "营销思维模型",
+          "charts": []
+        },
+        {
+          "role": "gallery",
+          "slide": 29,
+          "matched_as": "gallery",
+          "reused_layout": false,
+          "density": "medium",
+          "title_sample": "营销思维模型",
+          "charts": []
+        },
+        {
+          "role": "bar-chart",
+          "slide": 156,
+          "matched_as": "bar-chart",
+          "reused_layout": false,
+          "density": "medium",
+          "title_sample": ".5%",
+          "charts": [
+            "barChart"
+          ]
+        },
+        {
+          "role": "line-chart",
+          "slide": 161,
+          "matched_as": "line-chart",
+          "reused_layout": false,
+          "density": "medium",
+          "title_sample": "项目成果和销售额",
+          "charts": [
+            "areaChart"
+          ]
+        },
+        {
+          "role": "comparison",
+          "slide": 88,
+          "matched_as": "comparison",
+          "reused_layout": false,
+          "density": "medium",
+          "title_sample": "明年项目计划概况",
+          "charts": []
+        },
+        {
+          "role": "closing",
+          "slide": 17,
+          "matched_as": "closing",
+          "reused_layout": false,
+          "density": "sparse",
+          "title_sample": "",
+          "charts": []
+        }
+      ],
+      "unmatched_roles": []
+    },
+    "商业路演": {
+      "en": "pitch",
+      "recommended_length": "10-14 slides",
+      "family": "work-report-cn-100",
+      "default_colorway": "blue-white",
+      "theme": "academic-blue",
+      "steps": [
+        {
+          "role": "cover",
+          "slide": 7,
+          "matched_as": "cover",
+          "reused_layout": false,
+          "density": "light",
+          "title_sample": "有脑子皮皮踢",
+          "charts": []
+        },
+        {
+          "role": "body",
+          "slide": 24,
+          "matched_as": "body",
+          "reused_layout": false,
+          "density": "medium",
+          "title_sample": "年度工作进度概括",
+          "charts": []
+        },
+        {
+          "role": "bar-chart",
+          "slide": 93,
+          "matched_as": "bar-chart",
+          "reused_layout": false,
+          "density": "medium",
+          "title_sample": ".5%",
+          "charts": [
+            "barChart"
+          ]
+        },
+        {
+          "role": "comparison",
+          "slide": 25,
+          "matched_as": "comparison",
+          "reused_layout": false,
+          "density": "medium",
+          "title_sample": "明年项目计划概况",
+          "charts": []
+        },
+        {
+          "role": "process",
+          "slide": 20,
+          "matched_as": "process",
+          "reused_layout": false,
+          "density": "medium",
+          "title_sample": "产品",
+          "charts": []
+        },
+        {
+          "role": "timeline",
+          "slide": 59,
+          "matched_as": "timeline",
+          "reused_layout": false,
+          "density": "medium",
+          "title_sample": "项目时间表",
+          "charts": []
+        },
+        {
+          "role": "risk",
+          "slide": 19,
+          "matched_as": "risk",
+          "reused_layout": false,
+          "density": "medium",
+          "title_sample": "销售不佳问题分析和改善",
+          "charts": []
+        },
+        {
+          "role": "closing",
+          "slide": 16,
+          "matched_as": "closing",
+          "reused_layout": false,
+          "density": "sparse",
+          "title_sample": "",
+          "charts": []
+        }
+      ],
+      "unmatched_roles": []
+    }
+  }
+}

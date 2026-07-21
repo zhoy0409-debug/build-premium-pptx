@@ -1,0 +1,9 @@
+__pycache__/
+*.py[cod]
+
+# Intermediate build artefacts. slide-index.json holds absolute paths into a
+# private template library, so it must never be committed; the derived
+# references/local-library.json carries relative paths only and is safe.
+work/
+slide-index.json
+catalog.json

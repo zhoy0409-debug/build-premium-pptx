@@ -1,0 +1,1729 @@
+{
+  "version": 1,
+  "palettes": [
+    {
+      "source": "3.美式复古色卡\\2-复古颜色分享-01.jpg",
+      "family": "3.美式复古色卡",
+      "colors": [
+        {
+          "hex": "#DB868D",
+          "share": 0.294
+        },
+        {
+          "hex": "#2D452F",
+          "share": 0.164
+        },
+        {
+          "hex": "#966C68",
+          "share": 0.046
+        }
+      ],
+      "dominant": "#DB868D",
+      "accent": "#2D452F",
+      "legible_pairs": [
+        {
+          "background": "#DB868D",
+          "foreground": "#2D452F",
+          "contrast": 3.9,
+          "ok_small_text": false
+        },
+        {
+          "background": "#2D452F",
+          "foreground": "#DB868D",
+          "contrast": 3.9,
+          "ok_small_text": false
+        }
+      ],
+      "usable_as_theme": true
+    },
+    {
+      "source": "3.美式复古色卡\\2-复古颜色分享-02.jpg",
+      "family": "3.美式复古色卡",
+      "colors": [
+        {
+          "hex": "#B3B3B3",
+          "share": 0.297
+        },
+        {
+          "hex": "#083586",
+          "share": 0.157
+        },
+        {
+          "hex": "#385993",
+          "share": 0.042
+        }
+      ],
+      "dominant": "#B3B3B3",
+      "accent": "#083586",
+      "legible_pairs": [
+        {
+          "background": "#B3B3B3",
+          "foreground": "#083586",
+          "contrast": 5.37,
+          "ok_small_text": true
+        },
+        {
+          "background": "#083586",
+          "foreground": "#B3B3B3",
+          "contrast": 5.37,
+          "ok_small_text": true
+        },
+        {
+          "background": "#B3B3B3",
+          "foreground": "#385993",
+          "contrast": 3.32,
+          "ok_small_text": false
+        },
+        {
+          "background": "#385993",
+          "foreground": "#B3B3B3",
+          "contrast": 3.32,
+          "ok_small_text": false
+        }
+      ],
+      "usable_as_theme": true
+    },
+    {
+      "source": "3.美式复古色卡\\2-复古颜色分享-03.jpg",
+      "family": "3.美式复古色卡",
+      "colors": [
+        {
+          "hex": "#3F4D29",
+          "share": 0.286
+        },
+        {
+          "hex": "#B9A276",
+          "share": 0.162
+        },
+        {
+          "hex": "#7C7951",
+          "share": 0.05
+        }
+      ],
+      "dominant": "#3F4D29",
+      "accent": "#B9A276",
+      "legible_pairs": [
+        {
+          "background": "#3F4D29",
+          "foreground": "#B9A276",
+          "contrast": 3.68,
+          "ok_small_text": false
+        },
+        {
+          "background": "#B9A276",
+          "foreground": "#3F4D29",
+          "contrast": 3.68,
+          "ok_small_text": false
+        }
+      ],
+      "usable_as_theme": true
+    },
+    {
+      "source": "3.美式复古色卡\\2-复古颜色分享-04.jpg",
+      "family": "3.美式复古色卡",
+      "colors": [
+        {
+          "hex": "#AEC5AB",
+          "share": 0.3
+        },
+        {
+          "hex": "#50463A",
+          "share": 0.189
+        },
+        {
+          "hex": "#868E7B",
+          "share": 0.045
+        }
+      ],
+      "dominant": "#AEC5AB",
+      "accent": "#50463A",
+      "legible_pairs": [
+        {
+          "background": "#AEC5AB",
+          "foreground": "#50463A",
+          "contrast": 4.99,
+          "ok_small_text": true
+        },
+        {
+          "background": "#50463A",
+          "foreground": "#AEC5AB",
+          "contrast": 4.99,
+          "ok_small_text": true
+        }
+      ],
+      "usable_as_theme": true
+    },
+    {
+      "source": "3.美式复古色卡\\2-复古颜色分享-05.jpg",
+      "family": "3.美式复古色卡",
+      "colors": [
+        {
+          "hex": "#DBD3C8",
+          "share": 0.297
+        },
+        {
+          "hex": "#5D3619",
+          "share": 0.187
+        },
+        {
+          "hex": "#A48E7B",
+          "share": 0.046
+        }
+      ],
+      "dominant": "#DBD3C8",
+      "accent": "#5D3619",
+      "legible_pairs": [
+        {
+          "background": "#DBD3C8",
+          "foreground": "#5D3619",
+          "contrast": 7.06,
+          "ok_small_text": true
+        },
+        {
+          "background": "#5D3619",
+          "foreground": "#DBD3C8",
+          "contrast": 7.06,
+          "ok_small_text": true
+        },
+        {
+          "background": "#5D3619",
+          "foreground": "#A48E7B",
+          "contrast": 3.35,
+          "ok_small_text": false
+        },
+        {
+          "background": "#A48E7B",
+          "foreground": "#5D3619",
+          "contrast": 3.35,
+          "ok_small_text": false
+        }
+      ],
+      "usable_as_theme": true
+    },
+    {
+      "source": "3.美式复古色卡\\2-复古颜色分享-07.jpg",
+      "family": "3.美式复古色卡",
+      "colors": [
+        {
+          "hex": "#604896",
+          "share": 0.285
+        },
+        {
+          "hex": "#DAB119",
+          "share": 0.162
+        },
+        {
+          "hex": "#9D7D5C",
+          "share": 0.044
+        }
+      ],
+      "dominant": "#604896",
+      "accent": "#DAB119",
+      "legible_pairs": [
+        {
+          "background": "#604896",
+          "foreground": "#DAB119",
+          "contrast": 3.59,
+          "ok_small_text": false
+        },
+        {
+          "background": "#DAB119",
+          "foreground": "#604896",
+          "contrast": 3.59,
+          "ok_small_text": false
+        }
+      ],
+      "usable_as_theme": true
+    },
+    {
+      "source": "3.美式复古色卡\\2-复古颜色分享-08.jpg",
+      "family": "3.美式复古色卡",
+      "colors": [
+        {
+          "hex": "#B8CEDB",
+          "share": 0.297
+        },
+        {
+          "hex": "#2D452F",
+          "share": 0.188
+        },
+        {
+          "hex": "#7D9491",
+          "share": 0.046
+        }
+      ],
+      "dominant": "#B8CEDB",
+      "accent": "#2D452F",
+      "legible_pairs": [
+        {
+          "background": "#B8CEDB",
+          "foreground": "#2D452F",
+          "contrast": 6.43,
+          "ok_small_text": true
+        },
+        {
+          "background": "#2D452F",
+          "foreground": "#B8CEDB",
+          "contrast": 6.43,
+          "ok_small_text": true
+        },
+        {
+          "background": "#2D452F",
+          "foreground": "#7D9491",
+          "contrast": 3.25,
+          "ok_small_text": false
+        },
+        {
+          "background": "#7D9491",
+          "foreground": "#2D452F",
+          "contrast": 3.25,
+          "ok_small_text": false
+        }
+      ],
+      "usable_as_theme": true
+    },
+    {
+      "source": "3.美式复古色卡\\2-复古颜色分享-09.jpg",
+      "family": "3.美式复古色卡",
+      "colors": [
+        {
+          "hex": "#DBCA9C",
+          "share": 0.297
+        },
+        {
+          "hex": "#1F1C17",
+          "share": 0.188
+        },
+        {
+          "hex": "#8C8165",
+          "share": 0.046
+        }
+      ],
+      "dominant": "#DBCA9C",
+      "accent": "#1F1C17",
+      "legible_pairs": [
+        {
+          "background": "#DBCA9C",
+          "foreground": "#1F1C17",
+          "contrast": 10.46,
+          "ok_small_text": true
+        },
+        {
+          "background": "#1F1C17",
+          "foreground": "#DBCA9C",
+          "contrast": 10.46,
+          "ok_small_text": true
+        },
+        {
+          "background": "#1F1C17",
+          "foreground": "#8C8165",
+          "contrast": 4.4,
+          "ok_small_text": false
+        },
+        {
+          "background": "#8C8165",
+          "foreground": "#1F1C17",
+          "contrast": 4.4,
+          "ok_small_text": false
+        }
+      ],
+      "usable_as_theme": true
+    },
+    {
+      "source": "3.美式复古色卡\\2-复古颜色分享-10.jpg",
+      "family": "3.美式复古色卡",
+      "colors": [
+        {
+          "hex": "#E2C5CA",
+          "share": 0.305
+        },
+        {
+          "hex": "#5D5040",
+          "share": 0.186
+        },
+        {
+          "hex": "#AB9591",
+          "share": 0.049
+        }
+      ],
+      "dominant": "#E2C5CA",
+      "accent": "#5D5040",
+      "legible_pairs": [
+        {
+          "background": "#E2C5CA",
+          "foreground": "#5D5040",
+          "contrast": 4.87,
+          "ok_small_text": true
+        },
+        {
+          "background": "#5D5040",
+          "foreground": "#E2C5CA",
+          "contrast": 4.87,
+          "ok_small_text": true
+        }
+      ],
+      "usable_as_theme": true
+    },
+    {
+      "source": "3.美式复古色卡\\2-复古颜色分享-11.jpg",
+      "family": "3.美式复古色卡",
+      "colors": [
+        {
+          "hex": "#E2C5CA",
+          "share": 0.305
+        },
+        {
+          "hex": "#5D5040",
+          "share": 0.186
+        },
+        {
+          "hex": "#AB9591",
+          "share": 0.049
+        }
+      ],
+      "dominant": "#E2C5CA",
+      "accent": "#5D5040",
+      "legible_pairs": [
+        {
+          "background": "#E2C5CA",
+          "foreground": "#5D5040",
+          "contrast": 4.87,
+          "ok_small_text": true
+        },
+        {
+          "background": "#5D5040",
+          "foreground": "#E2C5CA",
+          "contrast": 4.87,
+          "ok_small_text": true
+        }
+      ],
+      "usable_as_theme": true
+    },
+    {
+      "source": "4.流行颜色\\5-流行颜色_画板 1 副本 10.jpg",
+      "family": "4.流行颜色",
+      "colors": [
+        {
+          "hex": "#FF6684",
+          "share": 0.312
+        },
+        {
+          "hex": "#5EF9AD",
+          "share": 0.207
+        },
+        {
+          "hex": "#13100E",
+          "share": 0.132
+        },
+        {
+          "hex": "#A7C5B5",
+          "share": 0.118
+        }
+      ],
+      "dominant": "#FF6684",
+      "accent": "#5EF9AD",
+      "legible_pairs": [
+        {
+          "background": "#5EF9AD",
+          "foreground": "#13100E",
+          "contrast": 14.1,
+          "ok_small_text": true
+        },
+        {
+          "background": "#13100E",
+          "foreground": "#5EF9AD",
+          "contrast": 14.1,
+          "ok_small_text": true
+        },
+        {
+          "background": "#13100E",
+          "foreground": "#A7C5B5",
+          "contrast": 10.19,
+          "ok_small_text": true
+        },
+        {
+          "background": "#A7C5B5",
+          "foreground": "#13100E",
+          "contrast": 10.19,
+          "ok_small_text": true
+        }
+      ],
+      "usable_as_theme": true
+    },
+    {
+      "source": "4.流行颜色\\5-流行颜色_画板 1 副本 11.jpg",
+      "family": "4.流行颜色",
+      "colors": [
+        {
+          "hex": "#F6EF9E",
+          "share": 0.312
+        },
+        {
+          "hex": "#FF8B28",
+          "share": 0.207
+        },
+        {
+          "hex": "#17100D",
+          "share": 0.121
+        },
+        {
+          "hex": "#C9C5AF",
+          "share": 0.113
+        },
+        {
+          "hex": "#9C6630",
+          "share": 0.066
+        }
+      ],
+      "dominant": "#F6EF9E",
+      "accent": "#FF8B28",
+      "legible_pairs": [
+        {
+          "background": "#F6EF9E",
+          "foreground": "#17100D",
+          "contrast": 15.91,
+          "ok_small_text": true
+        },
+        {
+          "background": "#17100D",
+          "foreground": "#F6EF9E",
+          "contrast": 15.91,
+          "ok_small_text": true
+        },
+        {
+          "background": "#17100D",
+          "foreground": "#C9C5AF",
+          "contrast": 10.83,
+          "ok_small_text": true
+        },
+        {
+          "background": "#C9C5AF",
+          "foreground": "#17100D",
+          "contrast": 10.83,
+          "ok_small_text": true
+        }
+      ],
+      "usable_as_theme": true
+    },
+    {
+      "source": "4.流行颜色\\5-流行颜色_画板 1 副本 12.jpg",
+      "family": "4.流行颜色",
+      "colors": [
+        {
+          "hex": "#0889FF",
+          "share": 0.324
+        },
+        {
+          "hex": "#F95FF1",
+          "share": 0.184
+        },
+        {
+          "hex": "#061A2E",
+          "share": 0.139
+        },
+        {
+          "hex": "#B4BECA",
+          "share": 0.132
+        },
+        {
+          "hex": "#803878",
+          "share": 0.045
+        }
+      ],
+      "dominant": "#0889FF",
+      "accent": "#F95FF1",
+      "legible_pairs": [
+        {
+          "background": "#061A2E",
+          "foreground": "#B4BECA",
+          "contrast": 9.34,
+          "ok_small_text": true
+        },
+        {
+          "background": "#B4BECA",
+          "foreground": "#061A2E",
+          "contrast": 9.34,
+          "ok_small_text": true
+        },
+        {
+          "background": "#F95FF1",
+          "foreground": "#061A2E",
+          "contrast": 6.64,
+          "ok_small_text": true
+        },
+        {
+          "background": "#061A2E",
+          "foreground": "#F95FF1",
+          "contrast": 6.64,
+          "ok_small_text": true
+        }
+      ],
+      "usable_as_theme": true
+    },
+    {
+      "source": "4.流行颜色\\5-流行颜色_画板 1 副本 3.jpg",
+      "family": "4.流行颜色",
+      "colors": [
+        {
+          "hex": "#FF7133",
+          "share": 0.315
+        },
+        {
+          "hex": "#ACF991",
+          "share": 0.195
+        },
+        {
+          "hex": "#16100C",
+          "share": 0.131
+        },
+        {
+          "hex": "#B8C6AD",
+          "share": 0.108
+        }
+      ],
+      "dominant": "#FF7133",
+      "accent": "#ACF991",
+      "legible_pairs": [
+        {
+          "background": "#ACF991",
+          "foreground": "#16100C",
+          "contrast": 15.01,
+          "ok_small_text": true
+        },
+        {
+          "background": "#16100C",
+          "foreground": "#ACF991",
+          "contrast": 15.01,
+          "ok_small_text": true
+        },
+        {
+          "background": "#16100C",
+          "foreground": "#B8C6AD",
+          "contrast": 10.52,
+          "ok_small_text": true
+        },
+        {
+          "background": "#B8C6AD",
+          "foreground": "#16100C",
+          "contrast": 10.52,
+          "ok_small_text": true
+        }
+      ],
+      "usable_as_theme": true
+    },
+    {
+      "source": "4.流行颜色\\5-流行颜色_画板 1 副本 4.jpg",
+      "family": "4.流行颜色",
+      "colors": [
+        {
+          "hex": "#AEFF02",
+          "share": 0.319
+        },
+        {
+          "hex": "#7E77F8",
+          "share": 0.201
+        },
+        {
+          "hex": "#120E0C",
+          "share": 0.132
+        },
+        {
+          "hex": "#B4CA84",
+          "share": 0.11
+        },
+        {
+          "hex": "#565783",
+          "share": 0.045
+        }
+      ],
+      "dominant": "#AEFF02",
+      "accent": "#7E77F8",
+      "legible_pairs": [
+        {
+          "background": "#AEFF02",
+          "foreground": "#120E0C",
+          "contrast": 15.64,
+          "ok_small_text": true
+        },
+        {
+          "background": "#120E0C",
+          "foreground": "#AEFF02",
+          "contrast": 15.64,
+          "ok_small_text": true
+        },
+        {
+          "background": "#120E0C",
+          "foreground": "#B4CA84",
+          "contrast": 10.72,
+          "ok_small_text": true
+        },
+        {
+          "background": "#B4CA84",
+          "foreground": "#120E0C",
+          "contrast": 10.72,
+          "ok_small_text": true
+        }
+      ],
+      "usable_as_theme": true
+    },
+    {
+      "source": "4.流行颜色\\5-流行颜色_画板 1 副本 5.jpg",
+      "family": "4.流行颜色",
+      "colors": [
+        {
+          "hex": "#FF4E9F",
+          "share": 0.344
+        },
+        {
+          "hex": "#F6EF9E",
+          "share": 0.188
+        },
+        {
+          "hex": "#140C0D",
+          "share": 0.126
+        },
+        {
+          "hex": "#C7C3B3",
+          "share": 0.115
+        },
+        {
+          "hex": "#946468",
+          "share": 0.042
+        }
+      ],
+      "dominant": "#FF4E9F",
+      "accent": "#F6EF9E",
+      "legible_pairs": [
+        {
+          "background": "#F6EF9E",
+          "foreground": "#140C0D",
+          "contrast": 16.32,
+          "ok_small_text": true
+        },
+        {
+          "background": "#140C0D",
+          "foreground": "#F6EF9E",
+          "contrast": 16.32,
+          "ok_small_text": true
+        },
+        {
+          "background": "#140C0D",
+          "foreground": "#C7C3B3",
+          "contrast": 10.92,
+          "ok_small_text": true
+        },
+        {
+          "background": "#C7C3B3",
+          "foreground": "#140C0D",
+          "contrast": 10.92,
+          "ok_small_text": true
+        }
+      ],
+      "usable_as_theme": true
+    },
+    {
+      "source": "4.流行颜色\\5-流行颜色_画板 1 副本 6.jpg",
+      "family": "4.流行颜色",
+      "colors": [
+        {
+          "hex": "#2AFE90",
+          "share": 0.304
+        },
+        {
+          "hex": "#CA87F8",
+          "share": 0.209
+        },
+        {
+          "hex": "#13100F",
+          "share": 0.133
+        },
+        {
+          "hex": "#9BD6B9",
+          "share": 0.118
+        },
+        {
+          "hex": "#71638E",
+          "share": 0.052
+        }
+      ],
+      "dominant": "#2AFE90",
+      "accent": "#CA87F8",
+      "legible_pairs": [
+        {
+          "background": "#2AFE90",
+          "foreground": "#13100F",
+          "contrast": 14.14,
+          "ok_small_text": true
+        },
+        {
+          "background": "#13100F",
+          "foreground": "#2AFE90",
+          "contrast": 14.14,
+          "ok_small_text": true
+        },
+        {
+          "background": "#13100F",
+          "foreground": "#9BD6B9",
+          "contrast": 11.47,
+          "ok_small_text": true
+        },
+        {
+          "background": "#9BD6B9",
+          "foreground": "#13100F",
+          "contrast": 11.47,
+          "ok_small_text": true
+        }
+      ],
+      "usable_as_theme": true
+    },
+    {
+      "source": "4.流行颜色\\5-流行颜色_画板 1 副本 7.jpg",
+      "family": "4.流行颜色",
+      "colors": [
+        {
+          "hex": "#FFD416",
+          "share": 0.348
+        },
+        {
+          "hex": "#100A08",
+          "share": 0.104
+        },
+        {
+          "hex": "#535436",
+          "share": 0.069
+        }
+      ],
+      "dominant": "#FFD416",
+      "accent": "#100A08",
+      "legible_pairs": [
+        {
+          "background": "#FFD416",
+          "foreground": "#100A08",
+          "contrast": 13.73,
+          "ok_small_text": true
+        },
+        {
+          "background": "#100A08",
+          "foreground": "#FFD416",
+          "contrast": 13.73,
+          "ok_small_text": true
+        },
+        {
+          "background": "#FFD416",
+          "foreground": "#535436",
+          "contrast": 5.46,
+          "ok_small_text": true
+        },
+        {
+          "background": "#535436",
+          "foreground": "#FFD416",
+          "contrast": 5.46,
+          "ok_small_text": true
+        }
+      ],
+      "usable_as_theme": true
+    },
+    {
+      "source": "4.流行颜色\\5-流行颜色_画板 1 副本 8.jpg",
+      "family": "4.流行颜色",
+      "colors": [
+        {
+          "hex": "#33FE43",
+          "share": 0.299
+        },
+        {
+          "hex": "#FA91D4",
+          "share": 0.205
+        },
+        {
+          "hex": "#14100E",
+          "share": 0.136
+        },
+        {
+          "hex": "#9AD79F",
+          "share": 0.115
+        },
+        {
+          "hex": "#876A75",
+          "share": 0.044
+        }
+      ],
+      "dominant": "#33FE43",
+      "accent": "#FA91D4",
+      "legible_pairs": [
+        {
+          "background": "#33FE43",
+          "foreground": "#14100E",
+          "contrast": 13.87,
+          "ok_small_text": true
+        },
+        {
+          "background": "#14100E",
+          "foreground": "#33FE43",
+          "contrast": 13.87,
+          "ok_small_text": true
+        },
+        {
+          "background": "#14100E",
+          "foreground": "#9AD79F",
+          "contrast": 11.34,
+          "ok_small_text": true
+        },
+        {
+          "background": "#9AD79F",
+          "foreground": "#14100E",
+          "contrast": 11.34,
+          "ok_small_text": true
+        }
+      ],
+      "usable_as_theme": true
+    },
+    {
+      "source": "4.流行颜色\\5-流行颜色_画板 1 副本 9.jpg",
+      "family": "4.流行颜色",
+      "colors": [
+        {
+          "hex": "#9C33FF",
+          "share": 0.323
+        },
+        {
+          "hex": "#F9C890",
+          "share": 0.226
+        },
+        {
+          "hex": "#C3BCB5",
+          "share": 0.113
+        },
+        {
+          "hex": "#10090D",
+          "share": 0.111
+        },
+        {
+          "hex": "#624C50",
+          "share": 0.051
+        }
+      ],
+      "dominant": "#9C33FF",
+      "accent": "#F9C890",
+      "legible_pairs": [
+        {
+          "background": "#F9C890",
+          "foreground": "#10090D",
+          "contrast": 12.83,
+          "ok_small_text": true
+        },
+        {
+          "background": "#10090D",
+          "foreground": "#F9C890",
+          "contrast": 12.83,
+          "ok_small_text": true
+        },
+        {
+          "background": "#C3BCB5",
+          "foreground": "#10090D",
+          "contrast": 10.48,
+          "ok_small_text": true
+        },
+        {
+          "background": "#10090D",
+          "foreground": "#C3BCB5",
+          "contrast": 10.48,
+          "ok_small_text": true
+        }
+      ],
+      "usable_as_theme": true
+    },
+    {
+      "source": "6.美式复古色卡第二弹\\美式复古色卡第二弹_画板 1 副本 11.jpg",
+      "family": "6.美式复古色卡第二弹",
+      "colors": [
+        {
+          "hex": "#E69E56",
+          "share": 0.188
+        },
+        {
+          "hex": "#34474E",
+          "share": 0.182
+        },
+        {
+          "hex": "#0C6A52",
+          "share": 0.159
+        },
+        {
+          "hex": "#8E8054",
+          "share": 0.046
+        }
+      ],
+      "dominant": "#E69E56",
+      "accent": "#34474E",
+      "legible_pairs": [
+        {
+          "background": "#E69E56",
+          "foreground": "#34474E",
+          "contrast": 4.35,
+          "ok_small_text": false
+        },
+        {
+          "background": "#34474E",
+          "foreground": "#E69E56",
+          "contrast": 4.35,
+          "ok_small_text": false
+        }
+      ],
+      "usable_as_theme": true
+    },
+    {
+      "source": "6.美式复古色卡第二弹\\美式复古色卡第二弹_画板 1 副本 12.jpg",
+      "family": "6.美式复古色卡第二弹",
+      "colors": [
+        {
+          "hex": "#986784",
+          "share": 0.184
+        },
+        {
+          "hex": "#324968",
+          "share": 0.183
+        },
+        {
+          "hex": "#DBAC74",
+          "share": 0.178
+        }
+      ],
+      "dominant": "#986784",
+      "accent": "#324968",
+      "legible_pairs": [
+        {
+          "background": "#324968",
+          "foreground": "#DBAC74",
+          "contrast": 4.44,
+          "ok_small_text": false
+        },
+        {
+          "background": "#DBAC74",
+          "foreground": "#324968",
+          "contrast": 4.44,
+          "ok_small_text": false
+        }
+      ],
+      "usable_as_theme": true
+    },
+    {
+      "source": "6.美式复古色卡第二弹\\美式复古色卡第二弹_画板 1 副本 18.jpg",
+      "family": "6.美式复古色卡第二弹",
+      "colors": [
+        {
+          "hex": "#228281",
+          "share": 0.148
+        },
+        {
+          "hex": "#DAAC70",
+          "share": 0.137
+        },
+        {
+          "hex": "#F9F6EF",
+          "share": 0.102
+        },
+        {
+          "hex": "#BFD4CC",
+          "share": 0.099
+        },
+        {
+          "hex": "#589C98",
+          "share": 0.082
+        },
+        {
+          "hex": "#275251",
+          "share": 0.042
+        }
+      ],
+      "dominant": "#228281",
+      "accent": "#DAAC70",
+      "legible_pairs": [
+        {
+          "background": "#F9F6EF",
+          "foreground": "#275251",
+          "contrast": 8.07,
+          "ok_small_text": true
+        },
+        {
+          "background": "#275251",
+          "foreground": "#F9F6EF",
+          "contrast": 8.07,
+          "ok_small_text": true
+        },
+        {
+          "background": "#BFD4CC",
+          "foreground": "#275251",
+          "contrast": 5.6,
+          "ok_small_text": true
+        },
+        {
+          "background": "#275251",
+          "foreground": "#BFD4CC",
+          "contrast": 5.6,
+          "ok_small_text": true
+        }
+      ],
+      "usable_as_theme": true
+    },
+    {
+      "source": "6.美式复古色卡第二弹\\美式复古色卡第二弹_画板 1 副本 3.jpg",
+      "family": "6.美式复古色卡第二弹",
+      "colors": [
+        {
+          "hex": "#D9D8C6",
+          "share": 0.197
+        },
+        {
+          "hex": "#D5B59E",
+          "share": 0.182
+        },
+        {
+          "hex": "#7D7C1F",
+          "share": 0.159
+        }
+      ],
+      "dominant": "#D9D8C6",
+      "accent": "#D5B59E",
+      "legible_pairs": [
+        {
+          "background": "#D9D8C6",
+          "foreground": "#7D7C1F",
+          "contrast": 3.06,
+          "ok_small_text": false
+        },
+        {
+          "background": "#7D7C1F",
+          "foreground": "#D9D8C6",
+          "contrast": 3.06,
+          "ok_small_text": false
+        }
+      ],
+      "usable_as_theme": true
+    },
+    {
+      "source": "6.美式复古色卡第二弹\\美式复古色卡第二弹_画板 1 副本 5.jpg",
+      "family": "6.美式复古色卡第二弹",
+      "colors": [
+        {
+          "hex": "#E7DDC2",
+          "share": 0.188
+        },
+        {
+          "hex": "#2F6F5F",
+          "share": 0.149
+        },
+        {
+          "hex": "#699180",
+          "share": 0.041
+        },
+        {
+          "hex": "#CDCCBA",
+          "share": 0.04
+        }
+      ],
+      "dominant": "#E7DDC2",
+      "accent": "#2F6F5F",
+      "legible_pairs": [
+        {
+          "background": "#E7DDC2",
+          "foreground": "#2F6F5F",
+          "contrast": 4.36,
+          "ok_small_text": false
+        },
+        {
+          "background": "#2F6F5F",
+          "foreground": "#E7DDC2",
+          "contrast": 4.36,
+          "ok_small_text": false
+        },
+        {
+          "background": "#2F6F5F",
+          "foreground": "#CDCCBA",
+          "contrast": 3.64,
+          "ok_small_text": false
+        },
+        {
+          "background": "#CDCCBA",
+          "foreground": "#2F6F5F",
+          "contrast": 3.64,
+          "ok_small_text": false
+        }
+      ],
+      "usable_as_theme": true
+    },
+    {
+      "source": "6.美式复古色卡第二弹\\美式复古色卡第二弹_画板 1 副本 8.jpg",
+      "family": "6.美式复古色卡第二弹",
+      "colors": [
+        {
+          "hex": "#DED7C4",
+          "share": 0.182
+        },
+        {
+          "hex": "#EAA3B3",
+          "share": 0.181
+        },
+        {
+          "hex": "#13487A",
+          "share": 0.161
+        },
+        {
+          "hex": "#616E91",
+          "share": 0.043
+        }
+      ],
+      "dominant": "#DED7C4",
+      "accent": "#EAA3B3",
+      "legible_pairs": [
+        {
+          "background": "#DED7C4",
+          "foreground": "#13487A",
+          "contrast": 6.54,
+          "ok_small_text": true
+        },
+        {
+          "background": "#13487A",
+          "foreground": "#DED7C4",
+          "contrast": 6.54,
+          "ok_small_text": true
+        },
+        {
+          "background": "#EAA3B3",
+          "foreground": "#13487A",
+          "contrast": 4.65,
+          "ok_small_text": true
+        },
+        {
+          "background": "#13487A",
+          "foreground": "#EAA3B3",
+          "contrast": 4.65,
+          "ok_small_text": true
+        }
+      ],
+      "usable_as_theme": true
+    },
+    {
+      "source": "6.美式复古色卡第二弹\\美式复古色卡第二弹_画板 1 副本.jpg",
+      "family": "6.美式复古色卡第二弹",
+      "colors": [
+        {
+          "hex": "#DBAC74",
+          "share": 0.195
+        },
+        {
+          "hex": "#A92928",
+          "share": 0.181
+        },
+        {
+          "hex": "#259191",
+          "share": 0.177
+        }
+      ],
+      "dominant": "#DBAC74",
+      "accent": "#A92928",
+      "legible_pairs": [
+        {
+          "background": "#DBAC74",
+          "foreground": "#A92928",
+          "contrast": 3.35,
+          "ok_small_text": false
+        },
+        {
+          "background": "#A92928",
+          "foreground": "#DBAC74",
+          "contrast": 3.35,
+          "ok_small_text": false
+        }
+      ],
+      "usable_as_theme": true
+    },
+    {
+      "source": "渐变色卡\\渐变色卡-01.jpg",
+      "family": "渐变色卡",
+      "colors": [
+        {
+          "hex": "#F8F5EE",
+          "share": 0.133
+        },
+        {
+          "hex": "#2F1225",
+          "share": 0.104
+        },
+        {
+          "hex": "#7A194E",
+          "share": 0.096
+        },
+        {
+          "hex": "#B25171",
+          "share": 0.089
+        },
+        {
+          "hex": "#E3C0C6",
+          "share": 0.075
+        },
+        {
+          "hex": "#F6E2BC",
+          "share": 0.074
+        },
+        {
+          "hex": "#AF265B",
+          "share": 0.074
+        },
+        {
+          "hex": "#CF92A2",
+          "share": 0.068
+        }
+      ],
+      "dominant": "#F8F5EE",
+      "accent": "#2F1225",
+      "legible_pairs": [
+        {
+          "background": "#F8F5EE",
+          "foreground": "#2F1225",
+          "contrast": 15.63,
+          "ok_small_text": true
+        },
+        {
+          "background": "#2F1225",
+          "foreground": "#F8F5EE",
+          "contrast": 15.63,
+          "ok_small_text": true
+        },
+        {
+          "background": "#2F1225",
+          "foreground": "#F6E2BC",
+          "contrast": 13.39,
+          "ok_small_text": true
+        },
+        {
+          "background": "#F6E2BC",
+          "foreground": "#2F1225",
+          "contrast": 13.39,
+          "ok_small_text": true
+        }
+      ],
+      "usable_as_theme": true
+    },
+    {
+      "source": "渐变色卡\\渐变色卡-02.jpg",
+      "family": "渐变色卡",
+      "colors": [
+        {
+          "hex": "#D5D2CD",
+          "share": 0.092
+        },
+        {
+          "hex": "#A24C5F",
+          "share": 0.087
+        },
+        {
+          "hex": "#6A1A45",
+          "share": 0.059
+        },
+        {
+          "hex": "#451033",
+          "share": 0.057
+        },
+        {
+          "hex": "#C0A49E",
+          "share": 0.041
+        }
+      ],
+      "dominant": "#D5D2CD",
+      "accent": "#A24C5F",
+      "legible_pairs": [
+        {
+          "background": "#D5D2CD",
+          "foreground": "#451033",
+          "contrast": 10.13,
+          "ok_small_text": true
+        },
+        {
+          "background": "#451033",
+          "foreground": "#D5D2CD",
+          "contrast": 10.13,
+          "ok_small_text": true
+        },
+        {
+          "background": "#D5D2CD",
+          "foreground": "#6A1A45",
+          "contrast": 7.54,
+          "ok_small_text": true
+        },
+        {
+          "background": "#6A1A45",
+          "foreground": "#D5D2CD",
+          "contrast": 7.54,
+          "ok_small_text": true
+        }
+      ],
+      "usable_as_theme": true
+    },
+    {
+      "source": "渐变色卡\\渐变色卡-03.jpg",
+      "family": "渐变色卡",
+      "colors": [
+        {
+          "hex": "#C7805B",
+          "share": 0.1
+        },
+        {
+          "hex": "#8D483C",
+          "share": 0.083
+        },
+        {
+          "hex": "#358C88",
+          "share": 0.068
+        },
+        {
+          "hex": "#AA9E78",
+          "share": 0.061
+        },
+        {
+          "hex": "#BCAD86",
+          "share": 0.049
+        }
+      ],
+      "dominant": "#C7805B",
+      "accent": "#8D483C",
+      "legible_pairs": [
+        {
+          "background": "#8D483C",
+          "foreground": "#BCAD86",
+          "contrast": 3.03,
+          "ok_small_text": false
+        },
+        {
+          "background": "#BCAD86",
+          "foreground": "#8D483C",
+          "contrast": 3.03,
+          "ok_small_text": false
+        }
+      ],
+      "usable_as_theme": true
+    },
+    {
+      "source": "渐变色卡\\渐变色卡-04.jpg",
+      "family": "渐变色卡",
+      "colors": [
+        {
+          "hex": "#E2BDBE",
+          "share": 0.157
+        },
+        {
+          "hex": "#D9E4ED",
+          "share": 0.093
+        },
+        {
+          "hex": "#897B91",
+          "share": 0.075
+        },
+        {
+          "hex": "#FEFAE1",
+          "share": 0.074
+        },
+        {
+          "hex": "#242B34",
+          "share": 0.053
+        }
+      ],
+      "dominant": "#E2BDBE",
+      "accent": "#D9E4ED",
+      "legible_pairs": [
+        {
+          "background": "#FEFAE1",
+          "foreground": "#242B34",
+          "contrast": 13.59,
+          "ok_small_text": true
+        },
+        {
+          "background": "#242B34",
+          "foreground": "#FEFAE1",
+          "contrast": 13.59,
+          "ok_small_text": true
+        },
+        {
+          "background": "#D9E4ED",
+          "foreground": "#242B34",
+          "contrast": 11.07,
+          "ok_small_text": true
+        },
+        {
+          "background": "#242B34",
+          "foreground": "#D9E4ED",
+          "contrast": 11.07,
+          "ok_small_text": true
+        }
+      ],
+      "usable_as_theme": true
+    },
+    {
+      "source": "渐变色卡\\渐变色卡-05.jpg",
+      "family": "渐变色卡",
+      "colors": [
+        {
+          "hex": "#F5E1DA",
+          "share": 0.082
+        },
+        {
+          "hex": "#9E9C24",
+          "share": 0.081
+        },
+        {
+          "hex": "#7F6649",
+          "share": 0.081
+        },
+        {
+          "hex": "#E9C9B1",
+          "share": 0.066
+        },
+        {
+          "hex": "#CFB78E",
+          "share": 0.059
+        },
+        {
+          "hex": "#2F2619",
+          "share": 0.042
+        }
+      ],
+      "dominant": "#F5E1DA",
+      "accent": "#9E9C24",
+      "legible_pairs": [
+        {
+          "background": "#F5E1DA",
+          "foreground": "#2F2619",
+          "contrast": 11.8,
+          "ok_small_text": true
+        },
+        {
+          "background": "#2F2619",
+          "foreground": "#F5E1DA",
+          "contrast": 11.8,
+          "ok_small_text": true
+        },
+        {
+          "background": "#E9C9B1",
+          "foreground": "#2F2619",
+          "contrast": 9.53,
+          "ok_small_text": true
+        },
+        {
+          "background": "#2F2619",
+          "foreground": "#E9C9B1",
+          "contrast": 9.53,
+          "ok_small_text": true
+        }
+      ],
+      "usable_as_theme": true
+    },
+    {
+      "source": "渐变色卡\\渐变色卡-1-01.jpg",
+      "family": "渐变色卡",
+      "colors": [
+        {
+          "hex": "#DCD2BE",
+          "share": 0.102
+        },
+        {
+          "hex": "#A9405E",
+          "share": 0.049
+        },
+        {
+          "hex": "#2D162A",
+          "share": 0.047
+        },
+        {
+          "hex": "#841753",
+          "share": 0.043
+        }
+      ],
+      "dominant": "#DCD2BE",
+      "accent": "#A9405E",
+      "legible_pairs": [
+        {
+          "background": "#DCD2BE",
+          "foreground": "#2D162A",
+          "contrast": 11.12,
+          "ok_small_text": true
+        },
+        {
+          "background": "#2D162A",
+          "foreground": "#DCD2BE",
+          "contrast": 11.12,
+          "ok_small_text": true
+        },
+        {
+          "background": "#DCD2BE",
+          "foreground": "#841753",
+          "contrast": 6.28,
+          "ok_small_text": true
+        },
+        {
+          "background": "#841753",
+          "foreground": "#DCD2BE",
+          "contrast": 6.28,
+          "ok_small_text": true
+        }
+      ],
+      "usable_as_theme": true
+    },
+    {
+      "source": "渐变色卡\\渐变色卡-1-02.jpg",
+      "family": "渐变色卡",
+      "colors": [
+        {
+          "hex": "#F8F5EE",
+          "share": 0.146
+        },
+        {
+          "hex": "#39142D",
+          "share": 0.127
+        },
+        {
+          "hex": "#9E2357",
+          "share": 0.116
+        },
+        {
+          "hex": "#F7E3BB",
+          "share": 0.084
+        },
+        {
+          "hex": "#CD5D81",
+          "share": 0.078
+        },
+        {
+          "hex": "#E5C3C8",
+          "share": 0.077
+        },
+        {
+          "hex": "#D093A4",
+          "share": 0.06
+        },
+        {
+          "hex": "#A14B67",
+          "share": 0.05
+        }
+      ],
+      "dominant": "#F8F5EE",
+      "accent": "#39142D",
+      "legible_pairs": [
+        {
+          "background": "#F8F5EE",
+          "foreground": "#39142D",
+          "contrast": 14.7,
+          "ok_small_text": true
+        },
+        {
+          "background": "#39142D",
+          "foreground": "#F8F5EE",
+          "contrast": 14.7,
+          "ok_small_text": true
+        },
+        {
+          "background": "#39142D",
+          "foreground": "#F7E3BB",
+          "contrast": 12.7,
+          "ok_small_text": true
+        },
+        {
+          "background": "#F7E3BB",
+          "foreground": "#39142D",
+          "contrast": 12.7,
+          "ok_small_text": true
+        }
+      ],
+      "usable_as_theme": true
+    },
+    {
+      "source": "渐变色卡\\渐变色卡-1-04.jpg",
+      "family": "渐变色卡",
+      "colors": [
+        {
+          "hex": "#E5C5AD",
+          "share": 0.057
+        },
+        {
+          "hex": "#F3E1D9",
+          "share": 0.054
+        },
+        {
+          "hex": "#927860",
+          "share": 0.052
+        },
+        {
+          "hex": "#CEB78B",
+          "share": 0.043
+        },
+        {
+          "hex": "#A79754",
+          "share": 0.043
+        },
+        {
+          "hex": "#B9A671",
+          "share": 0.04
+        }
+      ],
+      "dominant": "#E5C5AD",
+      "accent": "#F3E1D9",
+      "legible_pairs": [
+        {
+          "background": "#F3E1D9",
+          "foreground": "#927860",
+          "contrast": 3.27,
+          "ok_small_text": false
+        },
+        {
+          "background": "#927860",
+          "foreground": "#F3E1D9",
+          "contrast": 3.27,
+          "ok_small_text": false
+        }
+      ],
+      "usable_as_theme": true
+    },
+    {
+      "source": "渐变色卡\\渐变色卡-1-05.jpg",
+      "family": "渐变色卡",
+      "colors": [
+        {
+          "hex": "#C7DFFD",
+          "share": 0.069
+        },
+        {
+          "hex": "#FAF7E1",
+          "share": 0.05
+        },
+        {
+          "hex": "#EBC3C1",
+          "share": 0.044
+        },
+        {
+          "hex": "#928294",
+          "share": 0.043
+        }
+      ],
+      "dominant": "#C7DFFD",
+      "accent": "#FAF7E1",
+      "legible_pairs": [
+        {
+          "background": "#FAF7E1",
+          "foreground": "#928294",
+          "contrast": 3.33,
+          "ok_small_text": false
+        },
+        {
+          "background": "#928294",
+          "foreground": "#FAF7E1",
+          "contrast": 3.33,
+          "ok_small_text": false
+        }
+      ],
+      "usable_as_theme": true
+    }
+  ],
+  "summary": {
+    "scanned": 49,
+    "usable": 36
+  }
+}

@@ -152,6 +152,19 @@ Skill 可以在本地检索和调用用户有权使用的模板，但不会把�
 
 The Skill can privately search templates the user is authorized to use. Purchased source decks, embedded stock assets, and fonts are not redistributed. The public PPTX, layouts, and previews in this repository are original rebuilt resources.
 
+如果你有自己买的母版，跑一次下面两条命令，Skill 就能把它们变成按场景直接可选的版式库。生成的 JSON 只含角色、页码和相对路径，不含任何母版内容，可以安全提交。
+
+If you own template decks, run the two commands below once and the Skill will turn them into scenario-addressable layouts. The generated JSON holds roles, slide numbers, and relative paths only — no slide content — so it is safe to commit.
+
+```bash
+python scripts/index_slides.py "/path/to/templates" --output work/slide-index.json
+python scripts/build_scenario_packs.py work/slide-index.json --output references/local-library.json
+```
+
+用 `--exclude` 排除个人材料和含他人姓名的目录。可选：`python scripts/extract_palettes.py "/path/to/colour-cards" --output references/palette-library.json` 会把色卡图片读成配色方案，并标出哪些组合的对比度可用于正文小字。
+
+Use `--exclude` to keep personal material, and anything holding other people's names, out of the index. Optionally, `extract_palettes.py` reads colour-card images into palettes and flags which pairs clear the small-text contrast bar.
+
 ## 文件结构 / Repository map
 
 ```text
@@ -162,6 +175,12 @@ assets/showcase-*.png                 Rendered README previews
 references/layout-recipes.json        Layout and scenario selection rules
 references/aesthetic-patterns.md      Reusable visual grammars and dense-slide patterns
 references/design-and-qa.md           Design, data, and QA rules
+references/local-library.json         Scenario packs from a local library (generated)
+references/palette-library.json       Palettes read from local colour cards (generated)
+scripts/index_slides.py               Slide-level indexer for a local library
+scripts/build_scenario_packs.py       Slide index -> beginner scenario packs
+scripts/extract_palettes.py           Colour-card images -> contrast-checked palettes
+scripts/render_slides.ps1             Render chosen slides to PNG for QA
 scripts/catalog_pptx.py               Local template cataloger
 scripts/build_premium_resource_kit.mjs Reproducible resource-kit builder
 ```
