@@ -39,15 +39,35 @@ function Invoke-LibreOfficeFallback {
         throw 'Neither PowerPoint COM nor LibreOffice is available; cannot render.'
     }
     Write-Warning 'PowerPoint COM unavailable; exporting the whole deck to PDF instead.'
-    & $soffice --headless --convert-to pdf --outdir $outRoot $deck | Out-Null
-    Write-Output (Join-Path $outRoot "$stem.pdf")
+    $pdf = Join-Path $outRoot "$stem.pdf"
+    # Embedded fonts in purchased decks make soffice chatter on stderr ("EOT out of
+    # spec"). That is a warning, not a failure, so judge the run by the artefact.
+    & $soffice --headless --convert-to pdf --outdir $outRoot $deck 2>&1 | Out-Null
+    if (-not (Test-Path -LiteralPath $pdf)) {
+        throw "LibreOffice did not produce $pdf; the deck could not be rendered."
+    }
+    Write-Warning 'Output is a PDF, not per-slide PNGs; rasterise it for image QA.'
+    Write-Output $pdf
 }
 
-$app = $null
+function New-PowerPointApp {
+    # A crashed prior run can leave the COM server rejecting calls
+    # (RPC_E_CALL_REJECTED) for a short while, so treat the first refusal as
+    # transient rather than falling straight through to a whole-deck PDF.
+    foreach ($attempt in 1..3) {
+        try {
+            return New-Object -ComObject PowerPoint.Application
+        } catch {
+            if ($attempt -eq 3) { return $null }
+            Write-Warning "PowerPoint COM refused the call (attempt $attempt/3); retrying."
+            Start-Sleep -Seconds 5
+        }
+    }
+}
+
+$app = New-PowerPointApp
 $presentation = $null
-try {
-    $app = New-Object -ComObject PowerPoint.Application
-} catch {
+if (-not $app) {
     Invoke-LibreOfficeFallback
     return
 }
